@@ -27,8 +27,21 @@ function ActivityForm() {
                 </span>
 
                 {/* safety index 1-5 rating scale */}
+                <span>
+                    <label for=""></label>
+                    <input type="" placeholder="" name="" id="" class="form-input" />
+                </span>
 
                 {/* set up time dropdown with min ranges */}
+                <span>
+                    <label for="set-up">Set Up</label>
+                    <select name="set-up" id="setup-time" class="form-input">
+                        <option value="5 minutes">5 minutes</option>
+                        <option value="10 minutes">10 minutes</option>
+                        <option value="15 minutes">15 minutes</option>
+                        <option value="20 minutes">20 minutes</option>
+                    </select>
+                </span>
 
                 {/* tear down time dropdown with min ranges*/}
 
