@@ -9,7 +9,11 @@ function ActivityForm() {
             <form id="activity-form">
                 {/* activity name input */}
                 {/* can we hide the label when it comes to form output? */}
-
+                <span>
+                    <label for="activity-name">Activity Name</label>
+                    <input type="text" placeholder="Activity Name" name="activity-name" id="name" class="form-input" />
+                </span>
+                
                 {/* description textarea */}
 
                 {/* mess index 1-5 rating scale */}
@@ -31,7 +35,7 @@ function ActivityForm() {
                 {/* can we hide the label when it comes to form output? */}
                 {/* category/hashtag? need data type */}
 
-                
+
             </form>
         </section>
     );
