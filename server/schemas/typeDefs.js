@@ -1,5 +1,6 @@
 const { gql } = require('apollo-server-express');
 
+
 // create the typeDefs
 const typeDefs = gql`
     type Activity {
@@ -9,6 +10,9 @@ const typeDefs = gql`
         materials: [String!]
         setUpTime: Int!
         tearDownTime: Int!
+    }
+    type Query {
+        allActivities: [Activity]
     }
 `;
 

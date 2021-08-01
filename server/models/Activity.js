@@ -1,11 +1,7 @@
-
 const mongoose = require('mongoose');
 
 const { Schema, model } = require("mongoose");
 const bcrypt = require("bcrypt");
-
-
-// const activitySchema = require("./Activity");
 
 const activitySchema = new Schema(
 	{
@@ -32,11 +28,11 @@ const activitySchema = new Schema(
             },
         ],
         setUpTime: {
-			type: Int,
+			type: Number,
 			required: true,
         },
         tearDownTime: {
-			type: Int,
+			type: Number,
 			required: true,
 		},
 		
