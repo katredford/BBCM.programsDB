@@ -21,6 +21,10 @@ function ActivityForm() {
                 </span>
 
                 {/* mess index 1-5 rating scale */}
+                <span>
+                    <label for="mess-index">Mess Index:</label>
+                    <input type="" placeholder="" name="" id="" class="form-input" />
+                </span>
 
                 {/* safety index 1-5 rating scale */}
 
