@@ -73,6 +73,10 @@ function ActivityForm() {
                 </span>
 
                 {/* upload image - cloudinary? */}
+                <span>
+                    <label for=""></label>
+                    <input type="" placeholder="" name="" id="" class="form-input" />
+                </span>
 
                 {/* can we hide the label when it comes to form output? */}
 
