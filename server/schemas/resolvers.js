@@ -34,7 +34,6 @@ const resolvers = {
         
     },
     Mutation: {
-<<<<<<< HEAD
         saveActivity: async (parent, args) => {
             console.log('we hit the save activity!!!', args)
   const activity = await Activity.create(args);
@@ -63,25 +62,6 @@ const resolvers = {
   return user;
 }
   }  
-=======
-      addUser: async (parent, args) => {
-        const user = await User.create(args);
-      
-        return user;
-          },
-          login: async () => {
-      
-        },
-        // addActivity: async (parent, args, context) => {
-        //     if (context.activity) {
-        //         const activityData = await Activity.findOne({ _id: context.activity._id })
-        //             .select('-__v')
-        //             .populate('allActivities')
-        //     }
-        // }
-    },
-         
->>>>>>> 5d8cd2cfd02bbf17d7899d8a773e8d133b35c255
 }
 
 module.exports = resolvers;

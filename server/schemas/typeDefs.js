@@ -28,7 +28,6 @@ const typeDefs = gql `
         activity(_id: ID!): Activity
     }
     type Mutation {
-<<<<<<< HEAD
     login(email: String!, password: String!): User
     addUser(username: String!, email: String!, password: String!): User
   
@@ -41,18 +40,6 @@ const typeDefs = gql `
         deleteActivity(activityId: ID): Activity
 		
 	}
-=======
-        login(email: String!, password: String!): User
-        addUser(username: String!, email: String!, password: String!): User
-            saveActivity(
-                activityId: ID!
-                activityName: String!
-                description: String!
-                materials: [String!]
-            ): Activity
-            deleteActivity(activityId: ID): Activity
-        }
->>>>>>> 5d8cd2cfd02bbf17d7899d8a773e8d133b35c255
 `;
 
 // export typeDefs
