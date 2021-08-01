@@ -44,6 +44,15 @@ function ActivityForm() {
                 </span>
 
                 {/* tear down time dropdown with min ranges*/}
+                <span>
+                    <label for="tear-down">Tear Down</label>
+                    <select name="tear-down" id="tear-down" class="form-input">
+                        <option value="5 minutes">5 minutes</option>
+                        <option value="10 minutes">10 minutes</option>
+                        <option value="15 minutes">15 minutes</option>
+                        <option value="20 minutes">20 minutes</option>
+                    </select>
+                </span>
 
                 {/* tools/materials needed checklist */}
 
