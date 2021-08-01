@@ -3,10 +3,10 @@ const { gql } = require('apollo-server-express');
 // create the typeDefs
 const typeDefs = gql`
     type Activity {
-        activityId: ID!
+        _id: ID!
         activityName: String!
         description: String!
-        materials: [String!]
+        materials: [String]
         setUpTime: Int!
         tearDownTime: Int!
     }
@@ -34,12 +34,11 @@ type User {
     addUser(username: String!, email: String!, password: String!): User
   
 		saveActivity(
-			activityId: ID!
             activityName: String!
             description: String!
-            materials: [String!]
-         
+            materials: [String]
 		): Activity
+        
         deleteActivity(activityId: ID): Activity
 		
 	}

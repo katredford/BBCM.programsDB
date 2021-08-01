@@ -25,14 +25,14 @@ const activitySchema = new Schema(
       		maxlength: 28
             },
         ],
-        // setUpTime: {
-		// 	type: Int,
-		// 	required: true,
-        // },
-        // tearDownTime: {
-		// 	type: Int,
-		// 	required: true,
-		// },
+        setUpTime: {
+			type: Number,
+			required: true,
+        },
+        tearDownTime: {
+			type: Number,
+			required: true,
+		},
 		
 	},
 	// set this to use virtual below
