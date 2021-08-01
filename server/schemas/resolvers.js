@@ -8,7 +8,16 @@ const resolvers = {
         allActivities: async () => {
             return Activity.find();
 
-        },
+    },
+    searchCategory: async (parent, { search }, context) => {
+
+      const activites = await Activity.find({ "categories": { "$regex": search, "$options": "i" } })
+
+      console.log('Activites', activites)
+  
+    
+      return activites      
+    },
         me: async (parent, args, context) => {
           if (context.user) {
             const userData = await User.findOne({ _id: context.user._id })

@@ -35,6 +35,9 @@ const activitySchema = new Schema(
 			type: Number,
 			required: true,
 		},
+		categories: [{
+			type: String
+		}]
 		
 	},
 	// set this to use virtual below

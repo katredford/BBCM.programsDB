@@ -12,6 +12,7 @@ const typeDefs = gql `
         materials: [String]
         setUpTime: Int!
         tearDownTime: Int!
+        categories: [String]
     }
 
     type User {
@@ -26,6 +27,7 @@ const typeDefs = gql `
 		user(username: String!): User
         allActivities: [Activity]
         activity(_id: ID!): Activity
+        searchCategory(search: String): [Activity]
     }
     type Mutation {
     login(email: String!, password: String!): User
