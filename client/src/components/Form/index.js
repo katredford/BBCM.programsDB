@@ -61,6 +61,10 @@ function ActivityForm() {
                 </span>
 
                 {/* prompts maybe like add an extra field? */}
+                <span>
+                    <label for=""></label>
+                    <input type="" placeholder="" name="" id="" class="form-input" />
+                </span>
 
                 {/* learning objectives maybe like add an extra field? */}
 
