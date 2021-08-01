@@ -14,6 +14,17 @@ const typeDefs = gql`
     type Query {
         allActivities: [Activity]
     }
+    type Mutation {
+        login(email: String!, password: String!): User
+        addUser(username: String!, email: String!, password: String!): User
+            saveActivity(
+                activityId: ID!
+                activityName: String!
+                description: String!
+                materials: [String!]
+            ): Activity
+            deleteActivity(activityId: ID): Activity
+        }
 `;
 
 // export typeDefs
