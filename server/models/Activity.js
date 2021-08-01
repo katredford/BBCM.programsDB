@@ -1,11 +1,5 @@
-
-const mongoose = require('mongoose');
-
 const { Schema, model } = require("mongoose");
 // const bcrypt = require("bcrypt");
-
-
-// const activitySchema = require("./Activity");
 
 const activitySchema = new Schema(
 	{
@@ -31,14 +25,14 @@ const activitySchema = new Schema(
       		maxlength: 28
             },
         ],
-        setUpTime: {
-			type: Int,
-			required: true,
-        },
-        tearDownTime: {
-			type: Int,
-			required: true,
-		},
+        // setUpTime: {
+		// 	type: Int,
+		// 	required: true,
+        // },
+        // tearDownTime: {
+		// 	type: Int,
+		// 	required: true,
+		// },
 		
 	},
 	// set this to use virtual below
@@ -51,6 +45,6 @@ const activitySchema = new Schema(
 
 
 
-const Activity = mongoose.model("Activity", activitySchema);
+const Activity = model("Activity", activitySchema);
 
 module.exports = Activity;

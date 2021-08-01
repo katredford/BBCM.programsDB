@@ -12,7 +12,7 @@ const typeDefs = gql`
     }
 
     type Query {
-        allActivity: Activity
+        allActivities: Activity
     }
 `;
 
