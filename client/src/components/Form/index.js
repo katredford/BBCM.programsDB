@@ -55,6 +55,10 @@ function ActivityForm() {
                 </span>
 
                 {/* tools/materials needed checklist */}
+                <span>
+                    <label for=""></label>
+                    <input type="" placeholder="" name="" id="" class="form-input" />
+                </span>
 
                 {/* prompts maybe like add an extra field? */}
 
