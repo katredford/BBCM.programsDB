@@ -38,15 +38,15 @@ const activitySchema = new Schema(
 		
 	},
 	// set this to use virtual below
-	{
-		toJSON: {
-			virtuals: true,
-		},
-	}
+	// {
+	// 	toJSON: {
+	// 		virtuals: true,
+	// 	},
+	// }
 );
 
 
 
-const Activity = mongoose.model("Activity", activitySchema);
+const Activity = model("Activity", activitySchema);
 
 module.exports = Activity;
