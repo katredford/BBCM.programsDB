@@ -67,10 +67,15 @@ function ActivityForm() {
                 </span>
 
                 {/* learning objectives maybe like add an extra field? */}
+                <span>
+                    <label for=""></label>
+                    <input type="" placeholder="" name="" id="" class="form-input" />
+                </span>
 
                 {/* upload image - cloudinary? */}
 
                 {/* can we hide the label when it comes to form output? */}
+
                 {/* category/hashtag? need data type */}
 
 
