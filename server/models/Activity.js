@@ -31,22 +31,22 @@ const activitySchema = new Schema(
       		maxlength: 28
             },
         ],
-        // setUpTime: {
-		// 	type: Int,
-		// 	required: true,
-        // },
-        // tearDownTime: {
-		// 	type: Int,
-		// 	required: true,
-		// },
+        setUpTime: {
+			type: Int,
+			required: true,
+        },
+        tearDownTime: {
+			type: Int,
+			required: true,
+		},
 		
 	},
 	// set this to use virtual below
-	{
-		toJSON: {
-			virtuals: true,
-		},
-	}
+	// {
+	// 	toJSON: {
+	// 		virtuals: true,
+	// 	},
+	// }
 );
 
 

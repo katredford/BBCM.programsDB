@@ -10,6 +10,10 @@ const typeDefs = gql`
         setUpTime: Int!
         tearDownTime: Int!
     }
+
+    type Query {
+        allActivity: Activity
+    }
 `;
 
 // export typeDefs
