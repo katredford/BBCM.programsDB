@@ -79,10 +79,11 @@ function ActivityForm() {
                 </span>
 
                 {/* can we hide the label when it comes to form output? */}
-
                 {/* category/hashtag? need data type */}
-
-
+                <span>
+                    <label for=""></label>
+                    <input type="" placeholder="" name="" id="" class="form-input" />
+                </span>
             </form>
         </section>
     );
