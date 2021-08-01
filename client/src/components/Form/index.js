@@ -13,8 +13,12 @@ function ActivityForm() {
                     <label for="activity-name">Activity Name</label>
                     <input type="text" placeholder="Activity Name" name="activity-name" id="name" class="form-input" />
                 </span>
-                
-                {/* description textarea */}
+
+                {/* description textarea */}\
+                <span>
+                    <label for="description">Description:</label>
+                    <textarea placeholder="Description" name="description" id="description" class="form-input" />
+                </span>
 
                 {/* mess index 1-5 rating scale */}
 
