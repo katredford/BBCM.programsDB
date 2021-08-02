@@ -1,10 +1,11 @@
 import React, { useEffect } from "react";
-import Activity from "../Activity";
+import Activity from "../../pages/Activity";
 import { useStoreContext } from "../../utils/GlobalState";
 import { UPDATE_ACTIVITY } from "../../utils/actions";
 import { useQuery } from '@apollo/react-hooks';
 import { QUERY_ACTIVITY } from "../../utils/queries";
 import { idbPromise } from "../../utils/helpers";
+// import ActivityForm from "../../pages/Form";
 // import spinner from "../../assets/spinner.gif"
 
 function ActivityList() {

@@ -13,6 +13,6 @@ function Activities() {
     const { id } = useParams();
     const [currentActivity, setCurrentActivity] = useState({});
     const { loading, data } = useQuery(QUERY_ALL_ACTIVITIES);
-    // const { ADD_ACTIVITY } = state;
+    // const { ActivityList } = state;
 };
 export default Activities;

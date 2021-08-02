@@ -4,7 +4,7 @@ import { ApolloProvider } from '@apollo/react-hooks';
 import ApolloClient from 'apollo-boost';
 
 import Home from "./pages/Home";
-import Form from "./pages/Form";
+import ActivityForm from "./pages/Form";
 import Activity from "./pages/Activity";
 import Login from "./pages/Login";
 import Nav from "./components/Nav";
@@ -36,9 +36,9 @@ function App() {
               component={Home}
             />
             <Route exact path="/login" component={Login} />
-            <Route exact path="/form" component={Form} />
-            <Route exact path="/activity" component={Activity} />
-            {/* <Route exact path="/acitivites/:id" component={Activity} /> */}
+            <Route exact path="/activity" component={ActivityForm} />
+            <Route exact path="/activities" component={Activity} />
+            <Route exact path="/acitivites/:id" component={Activity} />
           </Switch>
         </div>
       </Router>

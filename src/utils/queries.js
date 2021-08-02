@@ -2,7 +2,7 @@ import gql from 'graphql-tag';
 
 export const QUERY_ACTIVITY = gql`
   query getActivities($activity: ID) {
-    activities(category: $category) {
+    activities {
       _id
       name
       description
