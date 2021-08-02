@@ -10,8 +10,8 @@ const typeDefs = gql `
         activityName: String!
         description: String!
         materials: [String]
-        setUpTime: Int!
-        tearDownTime: Int!
+        setUpTime: Int
+        tearDownTime: Int
         categories: [String]
     }
 
@@ -38,7 +38,7 @@ const typeDefs = gql `
             materials: [String]
 		): Activity
         
-        deleteActivity(activityId: ID): Activity
+        deleteActivity(activityId: ID!): Activity
 		
 	}
 `;
