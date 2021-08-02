@@ -12,23 +12,23 @@ export const LOGIN = gql`
 `;
 
 
-// export const ADD_ACTIVITY = gql`
-//   mutation addOrder($products: [ID]!) {
-//     addOrder(products: $products) {
-//       purchaseDate
-//       products {
-//         _id
-//       name
-//       description
-//       price
-//       quantity
-//       category {
-//         name
-//       } 
-//       }
-//     }
-//   }
-// `;
+export const ADD_ACTIVITY = gql`
+  mutation addOrder($products: [ID]!) {
+    addOrder(products: $products) {
+      purchaseDate
+      products {
+        _id
+      name
+      description
+      price
+      quantity
+      category {
+        name
+      } 
+      }
+    }
+  }
+`;
 
 //DO NOT NEED THIS SINCE WE DO NOT HAVE SIGNUP!
 

@@ -5,7 +5,7 @@
 // import { useQuery } from '@apollo/react-hooks';
 // import { QUERY_ACTIVITY } from "../../utils/queries";
 // import { idbPromise } from "../../utils/helpers";
-// import spinner from "../../assets/spinner.gif"
+// // import spinner from "../../assets/spinner.gif"
 
 // function ActivityList() {
 //   const [state, dispatch] = useStoreContext();
@@ -20,8 +20,9 @@
 //            type: UPDATE_ACTIVITY,
 //           activities: data.activities
 //         });
-//         data.activities.forEach((product) => {
-//           idbPromise('activities', 'put', product);
+//         data.activities.forEach((activity) => {
+//           idbPromise
+//           ('activities', 'put', activity);
 //         });
 //     } else if (!loading) {
 //       idbPromise('activities', 'get').then((activities) => {
@@ -34,11 +35,11 @@
 //   }, [data, loading, dispatch]);
 
 //   function filterActivity() {
-//     if (!currentCategory) {
+//     if (!currentActivity) {
 //       return state.activities;
 //     }
 
-//     return state.activities.filter(product => product.category._id === currentCategory);
+//     return state.activities.filter(activity => activity.category._id === currentActivity);
 //   }
 
 //   return (
@@ -46,13 +47,13 @@
 //       <h2>Your Activities:</h2>
 //       {state.activities.length ? (
 //         <div className="flex-row">
-//             {filterActivities().map(activity => (
-// //                 <Activity
-// //                   key= {activity._id}
-// //                   _id={activity._id}
-// //                   name={product.name}
-// // materials={activity.materials}
-// // setUpTime={activity.setUpTime}
+//             {filterActivity().map(activity => (
+//                 <Activity
+//                   key= {activity._id}
+//                   _id={activity._id}
+//                   name={activity.name}
+// materials={activity.materials}
+// setUpTime={activity.setUpTime}
 // // tearDownTime={tearDownTime}
 
 //                 />
@@ -61,8 +62,8 @@
 //       ) : (
 //         <h3>You haven't added any activities yet!</h3>
 //       )}
-//       { loading ? 
-//       <img src={spinner} alt="loading" />: null}
+//       {/* { loading ? 
+//       <img src={spinner} alt="loading" />: null} */}
 //     </div>
 //   );
 // }
