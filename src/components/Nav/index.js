@@ -35,16 +35,21 @@ function Nav() {
 
     return (
         <header className="flex-row px-1">
+            <h3>
+                <Link to="/activity">
+                    <span role="img" aria-label="act-little new-activity-form">📝</span>
+        Start Your New Activity
+        </Link>
+            </h3>
             <h1>
-                <Link to="/">
-                    <span role="img" aria-label="act-little">📝</span>
-          Activites for Little Ones
+                <Link to="/home">
+                    View All Activites for Little Ones
         </Link>
             </h1>
-
             <nav>
                 {showNavigation()}
             </nav>
+
         </header>
     );
 }
