@@ -1,11 +1,12 @@
 # NOTES
+**PLEASE DO NOT PULL THIS BRANCH CODE! ONCE CODE IS READY AND WORKING, I WILL USE ANOTHER BRANCH TO PUSH ONLY WORKING CODE TO DEVELOP. Thank you!**
+
 **TO DO:(Becca&F)**
 - Render Login, ActivityForm on web (done)
 - Style components
 - Login (logout- if available)
 - Post a new-activity
 - View posted activity(ies) 
-
 
 *  Since original folder (client-root) has had added/removed files, it would not start.
 * With moving **SRC FOLDER** out of changed original folder in **CLIENT**, and w/ installed deps, app successfully deployed to **DevBrowser** so I can track changes
