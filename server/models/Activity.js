@@ -15,7 +15,7 @@ const activitySchema = new Schema(
 		description: {
 			type: String,
 			required: true,
-            unique: true,
+            unique: false,
             minlength: 10,
       		maxlength: 280
 			
@@ -29,11 +29,11 @@ const activitySchema = new Schema(
         ],
         setUpTime: {
 			type: Number,
-			required: true,
+			required: false,
         },
         tearDownTime: {
 			type: Number,
-			required: true,
+			required: false,
 		},
 		categories: [{
 			type: String
