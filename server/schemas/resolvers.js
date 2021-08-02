@@ -85,8 +85,8 @@ const resolvers = {
     //       _id: activityId,
     //     })
       
-        eleteActivity: async (root, { activityId  }, { mongo: { Activity }, user }) => {
-  return await Activity.deleteOne({ activityId });
+        deleteActivity: async (root, { activityId, activityName  }, { mongo: { Activity }, user }) => {
+  return await Activity.deleteOne({ activityId, activityName });
 },
     // return deleteActivity;
     

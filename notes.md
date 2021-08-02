@@ -13,8 +13,20 @@ REACT:
 
 npx create-react-app client
 
-username: 'ramble',
-[0] email: 'trandle@email.com',
-[0] password: 'password4'
+npm i @apollo/client graphql
+
+npm i apollo-boost
+
+npm install -D concurrently
+
+npm install react-router-dom
+
+npm install jwt-decode
+
+{
+  "username": "tester2",
+  "password": "test12345",
+  "email": "test2@test.com"
+}
 
 server : npm install jsonwebtoken
