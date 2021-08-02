@@ -2,6 +2,7 @@
 
 const { AuthenticationError } = require('apollo-server-express');
 const { Activity, User } = require('../models');
+const { signToken } = require('../utils/auth')
 
 const resolvers = {
   Query: {
@@ -51,6 +52,7 @@ const resolvers = {
     },
 
     addUser: async (parent, args) => {
+      console.log('ADD USER!!!', args)
       const user = await User.create(args);
 
       return user;
@@ -70,7 +72,8 @@ const resolvers = {
         throw new AuthenticationError('Incorrect credentials');
       }
 
-      return user;
+      const token = signToken(user);
+      return { token, user };
     },
 
     //    deleteActivity: async (parent, { activityId }) => {
@@ -85,8 +88,18 @@ const resolvers = {
     //       _id: activityId,
     //     })
       
-        deleteActivity: async (root, { activityId, activityName  }, { mongo: { Activity }, user }) => {
-  return await Activity.deleteOne({ activityId, activityName });
+    deleteActivity: async (root, { activityId }) => {
+      console.log('We r in the resolver delete!!!', activityId)
+          
+      let message = await Activity.remove({ _id: activityId }, function (err) {
+        console.log('We deleted!!!', err)
+        return 'U r deleted!'
+      });
+   
+
+      message = { message: 'U r deleted!' }
+      console.log('message!!', message)
+      return message
 },
     // return deleteActivity;
     

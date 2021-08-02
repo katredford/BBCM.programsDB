@@ -17,6 +17,8 @@ const server = new ApolloServer({
   resolvers
 });
 
+const path = require('path')
+
 // integrate our Apollo server with the Express application as middleware
 server.applyMiddleware({ app });
 
