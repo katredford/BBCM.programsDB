@@ -5,6 +5,7 @@ import ApolloClient from 'apollo-boost';
 
 import Header from './components/Header';
 import Hero from './components/Hero';
+import Footer from './components/Footer';
 
 import Home from "./pages/Home";
 import Form from "./pages/Form";
@@ -39,6 +40,7 @@ function App() {
             <Route exact path="/activity" component={Activity} />
             {/* <Route exact path="/acitivites/:id" component={Activity} /> */}
           </Switch>
+          <Footer />
         </div>
       </Router>
     </ApolloProvider>

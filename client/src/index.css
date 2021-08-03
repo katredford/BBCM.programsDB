@@ -1,6 +1,12 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 body {
-  margin: 0;
+  margin: 0 0 100px 0;
   font-family: 'Montserrat', sans-serif;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -45,7 +51,6 @@ header button {
   border-style: solid;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px; 
   background-color: #273469;
-  box-shadow: ;
   font-size: 1.15rem;
   color: white;
   font-family: 'Montserrat', sans-serif;
@@ -86,4 +91,38 @@ header button:hover {
 .hero-text h3 {
   font-size: 3rem;
   line-height: 1rem;
+}
+/* end hero styles */
+
+/* footer styles */
+#footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+  background-color: #273469;
+  color: white;
+}
+
+footer div {
+  justify-content: center;
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+footer a:hover {
+  color: #B4D2E7;
+}
+
+/* end footer styles */
+
+.login {
+  margin-bottom: 100px;
 }
