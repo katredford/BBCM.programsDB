@@ -9,7 +9,6 @@ import Home from "./pages/Home";
 import ActivityForm from "./pages/Form";
 
 import Login from "./pages/Login";
-import Nav from "./components/Nav";
 import Detail from './pages/Detail'
 import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client'
 
@@ -38,11 +37,11 @@ function App() {
         <div>
           <Header />
           <Hero />
-          <Nav />
+
           <Switch>
             <Route exact path="/" page={Home} />
             <Route exact path="/login" component={Login} />
-            <Route exact path="/form" component={ActivityForm} />
+            <Route exact path="/activity-form" component={ActivityForm} />
             <Route exact path="/activities/:id" component={Detail} />
           </Switch>
           <Footer />

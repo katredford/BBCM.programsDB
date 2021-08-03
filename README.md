@@ -14,7 +14,7 @@ update: git really sucks
 update on update: I concur! 😆
 
 **TO DO**
-- Render Login, ActivityForm on web (done)
+- Render Login, ActivityForm on web
 - Style components
 - Login (logout- if available)
 - Post a new-activity

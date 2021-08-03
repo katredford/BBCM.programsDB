@@ -1,14 +1,13 @@
 import React from "react";
-import Activity from "../components/Activity";
-import ActivityForm from "../components/Form";
-// import Nav from "../components/Nav";
+import Details from "../pages/Details";
+import ActivityForm from "../pages/Form";
+
 
 const Home = () => {
     return (
         <div className="container">
-
             <ActivityForm />
-            <Activity />
+            <Details />
         </div>
     );
 };
