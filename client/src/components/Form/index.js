@@ -8,7 +8,6 @@ function ActivityForm() {
 
             <form id="activity-form">
                 {/* activity name input */}
-                {/* can we hide the label when it comes to form output? */}
                 <span>
                     <label for="activity-name">Activity Name</label>
                     <input type="text" placeholder="Activity Name" name="activity-name" id="name" class="form-input" />
@@ -33,6 +32,7 @@ function ActivityForm() {
                 </span>
 
                 {/* set up time dropdown with min ranges */}
+                {/* input? or, how to accept input from dropdown menu onto generated output*/}
                 <span>
                     <label for="set-up">Set Up</label>
                     <select name="set-up" id="setup-time" class="form-input">

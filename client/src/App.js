@@ -3,6 +3,9 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { ApolloProvider } from '@apollo/client';
 import ApolloClient from 'apollo-boost';
 
+import Header from './components/Header';
+import Hero from './components/Hero';
+
 import Home from "./pages/Home";
 import Form from "./pages/Form";
 import Activity from "./pages/Activity";
@@ -23,18 +26,14 @@ const client = new ApolloClient({
 
 function App() {
   return (
-
-    // <p>
-    //   Hello Worrld!
-    // </p>
     <ApolloProvider client={client}>
       <Router>
         <div>
+          <Header />
+          <Hero />
           <Nav />
           <Switch>
-            <Route exact path="/"
-              page={Home}
-            />
+            <Route exact path="/" page={Home}/>
             <Route exact path="/login" component={Login} />
             <Route exact path="/form" component={Form} />
             <Route exact path="/activity" component={Activity} />
