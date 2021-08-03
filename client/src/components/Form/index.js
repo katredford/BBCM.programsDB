@@ -23,13 +23,13 @@ function ActivityForm() {
                 {/* mess index 1-5 rating scale */}
                 <span>
                     <label for="mess-index">Mess Index:</label>
-                    <input type="" placeholder="" name="" id="" class="form-input" />
+                    <input type="" placeholder="mess index" name="" id="" class="form-input" />
                 </span>
 
                 {/* safety index 1-5 rating scale */}
                 <span>
                     <label for=""></label>
-                    <input type="" placeholder="" name="" id="" class="form-input" />
+                    <input type="" placeholder="safety index" name="" id="" class="form-input" />
                 </span>
 
                 {/* set up time dropdown with min ranges */}
@@ -56,32 +56,32 @@ function ActivityForm() {
 
                 {/* tools/materials needed checklist */}
                 <span>
-                    <label for=""></label>
-                    <input type="" placeholder="" name="" id="" class="form-input" />
+                    <label for="">Tools/Materials Needed:</label>
+                    <input type="" placeholder="tools/materials" name="" id="" class="form-input" />
                 </span>
 
                 {/* prompts maybe like add an extra field? */}
                 <span>
-                    <label for=""></label>
-                    <input type="" placeholder="" name="" id="" class="form-input" />
+                    <label for="">Prompts:</label>
+                    <input type="" placeholder="prompts" name="" id="" class="form-input" />
                 </span>
 
                 {/* learning objectives maybe like add an extra field? */}
                 <span>
-                    <label for=""></label>
+                    <label for="">Learning Objectives:</label>
                     <input type="" placeholder="" name="" id="" class="form-input" />
                 </span>
 
                 {/* upload image - cloudinary? */}
                 <span>
-                    <label for=""></label>
+                    <label for="">Upload Image</label>
                     <input type="" placeholder="" name="" id="" class="form-input" />
                 </span>
 
                 {/* can we hide the label when it comes to form output? */}
                 {/* category/hashtag? need data type */}
                 <span>
-                    <label for=""></label>
+                    <label for="">Categories/Hashtags</label>
                     <input type="" placeholder="" name="" id="" class="form-input" />
                 </span>
             </form>
