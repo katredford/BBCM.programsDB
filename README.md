@@ -10,4 +10,4 @@
 - Recommended to use nodemailer https://nodemailer.com/about/
 for main setup ... use youtube video to setup form in node if need/want https://www.youtube.com/watch?v=30VeUWxZjS8
 
-update: this should work
+update: git really sucks
