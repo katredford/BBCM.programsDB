@@ -12,7 +12,8 @@ import Form from "./pages/Form";
 import Activity from "./pages/Activity";
 import Login from "./pages/Login";
 import Nav from "./components/Nav";
-import Detail from './pages/Detail'
+import Detail from './pages/Detail';
+// import Modal from './components/Modal';
 import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client'
 
 
@@ -42,7 +43,7 @@ function App() {
         <div>
           <Header />
           <Hero />
-          <Nav />
+          {/* <Nav /> */}
           <Switch>
             <Route exact path="/" page={Home}/>
             <Route exact path="/login" component={Login} />

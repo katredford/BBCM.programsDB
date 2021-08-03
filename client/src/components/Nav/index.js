@@ -34,6 +34,7 @@ function Nav() {
     }
 
     return (
+        <div>
         <header className="flex-row px-1">
             <h1>
                 <Link to="/">
@@ -46,6 +47,7 @@ function Nav() {
                 {showNavigation()}
             </nav>
         </header>
+        </div>
     );
 }
 

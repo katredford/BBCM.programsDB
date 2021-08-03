@@ -1,5 +1,6 @@
 // import react
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function ActivityForm() {
     return (
@@ -85,6 +86,7 @@ function ActivityForm() {
                     <input type="" placeholder="" name="" id="" class="form-input" />
                 </span>
             </form>
+            <Link to="/activity"><p>Submit Form</p></Link>
         </section>
     );
 }

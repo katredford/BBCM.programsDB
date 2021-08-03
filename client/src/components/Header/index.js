@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+// import { Nav } from '../Nav'
+
 
 function Header() {
     return (
@@ -7,7 +9,6 @@ function Header() {
             <a href="/">
                 <h1>BBCM Programs</h1>
             </a>
-            
             <button><Link to="/form">Add New Activity</Link></button>
         </header>
     );

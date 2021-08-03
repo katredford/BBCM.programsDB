@@ -1,21 +1,14 @@
 import React from "react";
-import Activity from "../components/Activity";
+import Header from "../components/Header";
 import Form from "../components/Form";
 import Nav from "../components/Nav";
 
 const Home = () => {
     return (
-        <div className="container">
-            {/* <Header> */}
-                <Nav />
-            {/* </Header> */}
-            
-            <main>
-                {/* <Activity /> */}
-            </main>
-
-            <Form />
-        </div>
+       <div>
+           <Header />
+           <Nav />
+       </div>
     );
 };
 
