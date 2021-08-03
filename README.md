@@ -1,6 +1,6 @@
 <h1 align='center'>BBCM.programsDB</h1>
 
-### By likica * [Email me](mailto:Katies email) * 
+###  * [Email me](mailto:Katies email) * 
   * [Deployed App Link](NEED LINK HERE) 
 <br></br>
 
