@@ -76,17 +76,6 @@ const resolvers = {
       return { token, user };
     },
 
-    //    deleteActivity: async (parent, { activityId }) => {
-    //     console.log('delete delete delete!!!', { activityId })
-    //     const activity = await Activity._id.findeOneAndDelete( { activityId });
-
-    //   return activity;
-    // },
-    // deleteActivity: async (parent, { activityId }, context) => {
-    //   {
-    //     const deleteActivity = await Activity.findOneAndRemove({
-    //       _id: activityId,
-    //     })
       
     deleteActivity: async (root, { activityId }) => {
       console.log('We r in the resolver delete!!!', activityId)
@@ -100,24 +89,24 @@ const resolvers = {
       message = { message: 'U r deleted!' }
       console.log('message!!', message)
       return message
-},
-    // return deleteActivity;
+    },
     
-        //  deleteActivity: async (
-        // 			parent,
-        // 			{ activityId },
-        // 			context
-        // 		) => {
-        // 			if (context.activity) {
-        // 				await Activity.findByIdAndDelete(
-        // 					{ _id: context.activity._id },
-					
-        // 				);
+     updateActivity: async (root, { activityId }) => {
+      console.log('We r in the resolver UPDATE!!!', activityId)
+          
+      let message = await Activity.findByIdAndUpdate({ _id: activityId },{ new: true }, function (err) {
+        
+        console.log('We updated!!!', err)
+        
+        return 'U r updated!'
+      });
+   
 
-        // 				return Activity;
-        // 			}
-			
-        // 		},
+      message = { message: 'U r updated!' }
+      console.log('message!!', message)
+      return message
+},
+   
       }
     
   

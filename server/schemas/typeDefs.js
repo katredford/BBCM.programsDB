@@ -49,6 +49,11 @@ const typeDefs = gql `
 		): Activity
         
         deleteActivity(activityId: ID!): DeleteMessage
+        updateActivity(
+            activityId: ID!
+            activityName: String
+            description: String
+            materials: [String]): Activity
 		
 	}
 `;
