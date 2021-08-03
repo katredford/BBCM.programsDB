@@ -2,6 +2,8 @@ import React from "react";
 //import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
 
+import './specialtyStyleCSS/details.css';
+
 import {QUERY_SINGLE_ACTIVITY} from '../utils/queries'
 
 import { gql, useQuery } from '@apollo/client';
@@ -25,10 +27,18 @@ function Detail(props) {
     // get all old activites from DB and siplay below
       
     return (
-    <div>
-       <div> {data.singleActivity.activityName}</div>
-
-       <div>Existing activites</div>
+    <div className="details">
+        <section className="top">
+            <h3> {data.singleActivity.activityName}</h3>
+            <div className="minutes">
+                <p>SET UP: {data.singleActivity.setUpTime} MIN </p>
+                <p>TEAR DOWN: {data.singleActivity.tearDownTime} MIN </p>
+            </div>
+        </section>
+        <section className="supplies">
+            <p>Description:\n{data.singleActivity.description} </p>
+            <p>Tools/Materials:\n{data.singleActivity.materials} </p>
+        </section>
     </div>
     );
 }

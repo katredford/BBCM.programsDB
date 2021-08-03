@@ -26,7 +26,7 @@ const typeDefs = gql `
 		users: [User]
 		user(username: String!): User
         allActivities: [Activity]
-        activity(_id: ID!): Activity
+        singleActivity(_id: ID!): Activity
         searchCategory(search: String): [Activity]
     }
     type Mutation {

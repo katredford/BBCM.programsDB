@@ -9,6 +9,13 @@ const resolvers = {
       return Activity.find();
 
     },
+    singleActivity: async (parent, { _id }, context)=> {
+      console.log('WE HIT SINGLE ACTIVITY!!')
+      const activity = await Activity.findById(_id)
+      console.log('Activity we found!!!', activity)
+      return activity
+
+    },
     searchCategory: async (parent, { search }, context) => {
 
       const activites = await Activity.find({ "categories": { "$regex": search, "$options": "i" } })
