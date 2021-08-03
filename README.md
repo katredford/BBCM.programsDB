@@ -5,9 +5,9 @@
 <br></br>
 
 <p align="center">
-    <img src="https://img.shields.io/github/repo-size/likica/BBCM.programsDB" />
-    <img src="https://img.shields.io/github/issues/likica/BBCM.programsDB" />
-    <img src="https://img.shields.io/github/last-commit/likica/BBCM.programsDB" >
+    <img src="https://img.shields.io/github/repo-size/katredford/BBCM.programsDB" />
+    <img src="https://img.shields.io/github/issues/katredford/BBCM.programsDB" />
+    <img src="https://img.shields.io/github/last-commit/katredford/BBCM.programsDB" >
     </a>
 </p>
   
