@@ -14,6 +14,7 @@
       background: var(--light-pink);
       padding: 0 1.5em 0 1.5em;
       font-family: 'Indie Flower', cursive;
+      border: 1px solid var(--dark-purple);
   }
   
   .top {
@@ -38,7 +39,18 @@
     justify-content: center;
     margin-top: 64px;
     text-align: center;
+    font-weight: bold;
+    font-size: 20px;
     color: var(--dark-purple);
     width: 20%;
-    height: 100px;
+    height: 115px;
+  }
+
+  .supplies {
+      margin: var(--spacing-two);
+  }
+
+  .supplies h4{
+      font-weight: bold;
+      font-size: 20px;
   }

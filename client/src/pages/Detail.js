@@ -36,8 +36,14 @@ function Detail(props) {
             </div>
         </section>
         <section className="supplies">
-            <p>Description:\n{data.singleActivity.description} </p>
-            <p>Tools/Materials:\n{data.singleActivity.materials} </p>
+            <div>
+                <h4>Description:</h4>
+                <p>{data.singleActivity.description}</p> 
+            </div>
+            <div>
+                <h4>Tools/Materials:</h4>
+                <p>{data.singleActivity.materials} </p>
+            </div>
         </section>
     </div>
     );
