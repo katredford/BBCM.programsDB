@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Header() {
     return (
@@ -7,7 +8,7 @@ function Header() {
                 <h1>BBCM Programs</h1>
             </a>
             
-            <button>Add New Activity</button>
+            <button><Link to="/form">Add New Activity</Link></button>
         </header>
     );
 }
