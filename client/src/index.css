@@ -12,6 +12,7 @@ code {
     monospace;
 }
 
+/* header styles */
 #header {
   background-color: #434371;
   color: white;
@@ -28,4 +29,31 @@ header button {
   border-radius: 9999px;
   font-size: 1rem;
 }
+/* end header styles */
 
+/* hero styles */
+#hero {
+  margin: 0px;
+  padding: 11rem;
+  /* width: 100vw;
+  height: 100vh; */
+  background-image: url('./images/coasted-media-ivKvtooE4D0-unsplash.jpg');
+  background-position: center;
+  /* filter: blur(8px); */
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-text h2, h3 {
+  color: white;
+  line-height: 1.25rem;
+}
+
+.hero-text h2 {
+  font-size: 5rem; 
+}
+
+.hero-text h3 {
+  font-size: 3rem;
+}

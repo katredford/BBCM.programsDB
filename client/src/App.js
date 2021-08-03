@@ -4,6 +4,7 @@ import { ApolloProvider } from '@apollo/client';
 import ApolloClient from 'apollo-boost';
 
 import Header from './components/Header';
+import Hero from './components/Hero';
 
 import Home from "./pages/Home";
 import Form from "./pages/Form";
@@ -29,6 +30,7 @@ function App() {
       <Router>
         <div>
           <Header />
+          <Hero />
           <Nav />
           <Switch>
             <Route exact path="/" page={Home}/>
