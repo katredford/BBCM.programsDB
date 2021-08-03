@@ -35,14 +35,13 @@ const typeDefs = gql `
 		users: [User]
 		user(username: String!): User
         allActivities: [Activity]
-        activity(_id: ID!): Activity
+        singleActivity(_id: ID!): Activity
         searchCategory(search: String): [Activity]
     }
     type Mutation {
     login(email: String!, password: String!): Auth
     addUser(username: String!, email: String!, password: String!): User
-  
-		saveActivity(
+    saveActivity(
             activityName: String!
             description: String!
             materials: [String]

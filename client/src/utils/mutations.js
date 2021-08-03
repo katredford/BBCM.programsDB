@@ -18,6 +18,7 @@ export const ADD_ACTIVITY = gql`
         addActivity(activities: $activities) {
             activities {
                 _id
+                activityName
                 description
                 materials
                 setUpTime

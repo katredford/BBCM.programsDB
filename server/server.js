@@ -18,6 +18,7 @@ const server = new ApolloServer({
 });
 
 const path = require('path')
+const {Activity} = require('./models')
 
 // integrate our Apollo server with the Express application as middleware
 server.applyMiddleware({ app });
@@ -51,6 +52,8 @@ app.get('*', (req, res) => {
   db.once('open', () => {
     app.listen(PORT, () => {
       console.log(`🌍 Now listening on localhost:${PORT}`);
+
+      //Activity.create({activityName: 'Drawing', description: 'art time is my fav time', materials: ['pens', 'paper'], categories: ['art']})
 
       console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`)
       // if we're in production, serve client/build as static assets
