@@ -1,9 +1,19 @@
 // import react
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 
 function ActivityForm() {
+    const history = useHistory();
+
+    const handleSubmit = function(e) {
+        e.preventDefault();
+        // submit form input to db here, then redirect to the home page "/"
+        history.push("/");
+    };
+
+
     return (
-        <section>
+        <section id="form-section">
             <h1>Enter Activity Info</h1>
 
             <form id="activity-form">
@@ -13,7 +23,7 @@ function ActivityForm() {
                     <input type="text" placeholder="Activity Name" name="activity-name" id="name" class="form-input" />
                 </span>
 
-                {/* description textarea */}\
+                {/* description textarea */}
                 <span>
                     <label for="description">Description:</label>
                     <textarea placeholder="Description" name="description" id="description" class="form-input" />
@@ -84,7 +94,10 @@ function ActivityForm() {
                     <label for="">Categories/Hashtags</label>
                     <input type="" placeholder="" name="" id="" class="form-input" />
                 </span>
+
+                <button type="submit" onClick={handleSubmit}>submit</button>
             </form>
+
         </section>
     );
 }

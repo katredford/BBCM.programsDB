@@ -6,12 +6,16 @@
 //     //   UPDATE_ACTIVITY,
 //     //   REMOVE_ACTIVITY,
 // } from "../utils/actions";
-// import { QUERY_ACTIVITY, QUERY_ALL_ACTIVITIES } from "../utils/queries";
+// // import { QUERY_ACTIVITY, QUERY_ALL_ACTIVITIES } from "../utils/queries";
 
-// function myActivities() {
+// function MyActivities() {
 //     const { id } = useParams();
 //     const [currentActivity, setCurrentActivity] = useState({});
-//     const { loading, data } = useQuery(QUERY_ALL_ACTIVITIES);
-//     const { activities } = state;
+//     // const { loading, data } = useQuery(QUERY_ALL_ACTIVITIES);
+//     // const { activities } = state;
+
+//     return (
+//         <h1>hey</h1>
+//     );
 // };
-// export default myActivities;
+// export default MyActivities;

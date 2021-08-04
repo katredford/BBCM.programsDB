@@ -38,7 +38,7 @@ function Nav() {
             <h1>
                 <Link to="/">
                     <span role="img" aria-label="act-little">📝</span>
-          Activites for Little Ones
+          Activites for Little Ones hi
         </Link>
             </h1>
 
