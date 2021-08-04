@@ -6,9 +6,15 @@ import Nav from "../components/Nav";
 const Home = () => {
     return (
         <div className="container">
-            <Nav />
+            {/* <Header> */}
+                <Nav />
+            {/* </Header> */}
+            
+            <main>
+                {/* <Activity /> */}
+            </main>
+
             <Form />
-            <Activity />
         </div>
     );
 };

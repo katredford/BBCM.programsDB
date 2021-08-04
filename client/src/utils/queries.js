@@ -1,4 +1,4 @@
-// import gql from 'graphql-tag';
+import gql from 'graphql-tag';
 
 // export const QUERY_ACTIVITY = gql`
 //   query getActivities($activity: ID) {
@@ -47,3 +47,17 @@
 //   }
 // }
 // `;
+
+
+export const QUERY_SINGLE_ACTIVITY = gql`
+query singleActivity($_id: ID!) {
+    singleActivity(_id: $_id) {
+        _id
+        activityName
+        description
+        materials
+        setUpTime
+        tearDownTime
+    }
+  }
+`;

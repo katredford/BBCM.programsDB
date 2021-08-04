@@ -1,8 +1,12 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  margin: 0 0 100px 0;
+  font-family: 'Montserrat', sans-serif;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -10,4 +14,118 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+#header, #hero {
+  text-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+/* header styles */
+#header {
+  margin: 0px;
+  padding: 2rem 5.5rem 1.25rem 5.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-image: url('./images/coasted-media-ivKvtooE4D0-unsplash.jpg');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+header a {
+  text-decoration: none;
+}
+
+header h1 {
+  color: #273469;
+}
+
+header button {
+  padding: 2rem;
+  border-radius: 9999px;
+  border-color: #273469;
+  border-style: solid;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px; 
+  background-color: #273469;
+  font-size: 1.15rem;
+  font-family: 'Montserrat', sans-serif;
+  transition: 0.4s; 
+}
+
+header button a {
+  color: white;
+}
+
+header button:hover {
+  background-color: #B4D2E7;
+  border-color: #B4D2E7;
+  color: #273469;
+}
+/* end header styles */
+
+/* hero styles */
+#hero {
+  margin: 0px;
+  padding: 11rem;
+  /* width: 100vw;
+  height: 100vh; */
+  background-image: url('./images/coasted-media-ivKvtooE4D0-unsplash.jpg');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-text h2, h3 {
+  color: white;
+}
+
+.hero-text h2 {
+  font-size: 4.5rem;
+  line-height: 4rem;
+}
+
+.hero-text h3 {
+  font-size: 3rem;
+  line-height: 1rem;
+}
+/* end hero styles */
+
+/* footer styles */
+#footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+  background-color: #273469;
+  color: white;
+}
+
+footer div {
+  justify-content: center;
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+footer a:hover {
+  color: #B4D2E7;
+}
+
+/* end footer styles */
+
+.login {
+  margin-bottom: 100px;
 }

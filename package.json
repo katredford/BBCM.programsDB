@@ -1,7 +1,7 @@
 {
   "name": "bbcm-programs",
   "version": "0.1.0",
-  "description": "",
+  "description": "*  Since original folder (client-root) has had added/removed files, it would not start. * With moving **SRC FOLDER** out of changed original folder in **CLIENT**, and w/ installed deps, app successfully deployed to **DevBrowser** so I can track changes * Future code adding process **NEED to MAKE SURE to follow/match naming conventions w/ b/e**",
   "main": "server/server.js",
   "scripts": {
     "start": "node server/server.js",
@@ -16,7 +16,19 @@
     "concurrently": "^5.3.0"
   },
   "dependencies": {
+    "apollo-server-express": "^3.1.1",
     "bcrypt": "^5.0.1",
+    "express": "^4.17.1",
+    "graphql": "^15.5.1",
+    "mongoose": "^5.13.5",
     "nodemon": "^2.0.12"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/katredford/BBCM.programsDB.git"
+  },
+  "bugs": {
+    "url": "https://github.com/katredford/BBCM.programsDB/issues"
+  },
+  "homepage": "https://github.com/katredford/BBCM.programsDB#readme"
 }

@@ -1,0 +1,56 @@
+:root {
+    --light-pink: #f7b2b7;
+    --dark-purple: #541388;
+    --purple: #7F2982;
+    --pink: #DE639A;
+    --peach: #F7717D;
+    --spacing-one: calc(0.5rem);
+    --spacing-two: calc(1rem);
+    --spacing-five: calc(5rem);
+  }
+
+  .details {
+      margin: var(--spacing-five);
+      background: var(--light-pink);
+      padding: 0 1.5em 0 1.5em;
+      font-family: 'Indie Flower', cursive;
+      border: 1px solid var(--dark-purple);
+  }
+  
+  .top {
+      display: flex;
+  }
+
+  .details h3 {
+    color: var(--purple);
+    text-align: center;
+    font-weight: 700;
+    line-height: 1.25;
+    font-size: 6.25rem;
+    width: 66%;
+    margin-top: 58px;
+    margin-bottom: 20px;
+  }
+
+  .minutes {
+    border: 3px solid var(--dark-purple);
+    background-color: #bfa5e3;
+    border-radius: 25px;
+    justify-content: center;
+    margin-top: 64px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    color: var(--dark-purple);
+    width: 20%;
+    height: 115px;
+  }
+
+  .supplies {
+      margin: var(--spacing-two);
+  }
+
+  .supplies h4{
+      font-weight: bold;
+      font-size: 20px;
+  }
