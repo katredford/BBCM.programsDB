@@ -12,8 +12,8 @@ export const LOGIN = gql`
 `;
 
 export const ADD_ACTIVITY = gql`
-    mutation addActivity($activities: [ID]!) {
-        addActivity(activities: $activities) {
+    mutation addActivity($activityName: String!, $description: String!, $materials: String!, $setUpTime: String!, $tearDownTime: String! ) {
+        addActivity(activityName: $activityName, description: $description, materials: $materials, setUpTime: $setUpTime, $tearDownTime: $tearDownTime ) {
             activities {
                 _id
                 activityName

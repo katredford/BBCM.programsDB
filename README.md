@@ -11,3 +11,12 @@
 for main setup ... use youtube video to setup form in node if need/want https://www.youtube.com/watch?v=30VeUWxZjS8
 
 update: git really sucks
+update on update: I concur! 😆
+
+**TO DO**
+- Render Login, ActivityForm on web (done)
+- Style components
+- Login (logout- if available)
+- Post a new-activity
+- View posted activity(ies) 
+

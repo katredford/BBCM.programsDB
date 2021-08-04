@@ -1,3 +1,44 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+const ActivityList = ({ activities }) => {
+    if(!activities.length) {
+        return <h3>No Activities Yet</h3>
+    }
+
+    return (
+        <div>
+            {activities &&
+                activities.map(activity => (
+                    <div key={activity._id}>
+                        <p>
+                            <Link 
+                                to={`/activities/${activity._id}`}
+                            >
+                                {activity.activityName}
+                            </Link>
+                        </p>
+                        <p>
+                            Description: {activity.description}
+                        </p>
+                        <p>
+                            Materials: {activity.materials}
+                        </p>
+                        <p>
+                            Set Up: {activity.setUpTime} min
+                        </p>
+                        <p>
+                            Tear Down: {activity.tearDownTime} min
+                        </p>
+                    </div>
+                ))
+            }
+        </div>
+    )
+}
+
+export default ActivityList;
+
 // import React, { useEffect } from "react";
 // import Activity from "../Activity";
 // import { useStoreContext } from "../../utils/GlobalState";

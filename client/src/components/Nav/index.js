@@ -36,12 +36,6 @@ function Nav() {
     return (
         <div>
         <header className="flex-row px-1">
-            <h1>
-                <Link to="/">
-                    <span role="img" aria-label="act-little">📝</span>
-          Activites for Little Ones
-        </Link>
-            </h1>
 
             <nav>
                 {showNavigation()}

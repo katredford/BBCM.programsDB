@@ -150,3 +150,7 @@ footer a:hover {
 .login {
   margin-bottom: 100px;
 }
+
+#activity-form {
+  height: 600px;
+}
