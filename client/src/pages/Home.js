@@ -1,21 +1,20 @@
 import React from "react";
 import Activity from "../components/Activity";
-import Form from "../components/Form";
-import Nav from "../components/Nav";
+import Helmet from "react-helmet";
+
 
 const Home = () => {
     return (
-        <div className="container">
-            {/* <Header> */}
-                <Nav />
-            {/* </Header> */}
-            
-            <main>
-                {/* <Activity /> */}
-            </main>
+        <>
+        <Helmet bodyAttributes={{class: "home"}} />
 
-            <Form />
+        <div className="container">
+            <main>
+                <Activity />
+            </main>
         </div>
+        </>
+        
     );
 };
 

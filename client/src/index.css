@@ -4,8 +4,11 @@ html {
 }
 
 body {
-  margin: 0 0 100px 0;
+  margin: 0;
+  padding: 0 0 124px 0;
+  min-height: 100%;
   font-family: 'Montserrat', sans-serif;
+
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -63,6 +66,9 @@ header button a {
 header button:hover {
   background-color: #B4D2E7;
   border-color: #B4D2E7;
+}
+
+header button:hover a {
   color: #273469;
 }
 /* end header styles */
@@ -70,9 +76,9 @@ header button:hover {
 /* hero styles */
 #hero {
   margin: 0px;
-  padding: 11rem;
-  /* width: 100vw;
-  height: 100vh; */
+  padding: 5rem;
+  /* width: 100vw; */
+  /* height: 75vh; */
   background-image: url('./images/coasted-media-ivKvtooE4D0-unsplash.jpg');
   background-position: center;
   background-size: cover;
@@ -80,6 +86,11 @@ header button:hover {
   display: flex;
   justify-content: center;
   text-align: center;
+}
+
+#hero.home {
+  height: 75vh;
+  padding: 11rem;
 }
 
 .hero-text h2, h3 {
@@ -97,9 +108,27 @@ header button:hover {
 }
 /* end hero styles */
 
+/* input form styles */
+#form-section {
+  background-color: purple;
+}
+
+#form-section h1 {
+  padding: 1.5rem;
+  font-size: 3rem;
+  text-align: center;
+}
+
+#activity-form {
+  display: flex;
+}
+
+/* end input form styles */
+
 /* footer styles */
 #footer {
-  position: absolute;
+  /* position covers up page content but we need it fixed to the bottom */
+  position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -126,6 +155,12 @@ footer a:hover {
 
 /* end footer styles */
 
-.login {
-  margin-bottom: 100px;
+.tutor {
+  display: flex;
+  flex-direction: column;
+}
+
+.tutor-inner {
+  /* if available space, element grow to it */
+  flex-grow: 1;
 }

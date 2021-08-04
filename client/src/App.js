@@ -44,16 +44,18 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <div>
+        <div className="tutor">
           <Header />
           <Hero />
-          <Nav />
+          {/* <Nav /> */}
+          <div className="tutor-inner">
           <Switch>
             <Route exact path="/" page={Home} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/form" component={ActivityForm} />
             <Route exact path="/activities/:id" component={Detail} />
           </Switch>
+          </div>          
           <Footer />
         </div>
       </Router>
