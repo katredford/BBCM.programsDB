@@ -46,6 +46,9 @@ const typeDefs = gql `
             activityName: String!
             description: String!
             materials: [String]
+            setUpTime: Int
+            tearDownTime: Int
+            categories: [String]
 		): Activity
         
         deleteActivity(activityId: ID!): DeleteMessage
@@ -62,5 +65,3 @@ const typeDefs = gql `
 module.exports = typeDefs;
 
 
-// login(email: String!, password: String!): User
-//     addUser(username: String!, email: String!, password: String!): User

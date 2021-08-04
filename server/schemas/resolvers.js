@@ -91,21 +91,31 @@ const resolvers = {
       return message
     },
     
-     updateActivity: async (root, { activityId }) => {
-      console.log('We r in the resolver UPDATE!!!', activityId)
+    //  updateActivity: async (root, { activityId }) => {
+    //   console.log('We r in the resolver UPDATE!!!', activityId)
           
-      let message = await Activity.findByIdAndUpdate({ _id: activityId },{ new: true }, function (err) {
+    //   let activityUpdate = await Activity.findByIdAndUpdate({ _id: activityId },{ new: true }, function (err) {
         
-        console.log('We updated!!!', err)
+    //     console.log('We updated!!!', err)
         
-        return 'U r updated!'
-      });
+    //     return "all hail the update"
+    //   });
    
 
-      message = { message: 'U r updated!' }
-      console.log('message!!', message)
-      return message
-},
+    //   // message = { message: 'U r updated!' }
+    //   // console.log('message!!', message)
+    //   // return message
+    // },
+     
+       updateActivity: async (parent, args) => {
+      console.log('we hit the UPDATE activity!!!', args)
+         const activity = await Activity.findByIdAndUpdate(
+           { _id: args.activityId },
+            args, {new: true}
+         );
+
+      return activity;
+    },
    
       }
     
