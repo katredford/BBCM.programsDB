@@ -55,7 +55,12 @@ const typeDefs = gql `
             activityId: ID!
             activityName: String
             description: String
-            materials: [String]): Activity
+            materials: [String]
+            setUpTime: Int
+        tearDownTime: Int
+        categories: [String]
+        ): Activity
+
 		
 	}
 `;
