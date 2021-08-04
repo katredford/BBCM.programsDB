@@ -18,12 +18,12 @@ const resolvers = {
     },
     searchCategory: async (parent, { search }, context) => {
 
-      const activites = await Activity.find({ "categories": { "$regex": search, "$options": "i" } })
+      const activities = await Activity.find({ "categories": { "$regex": search, "$options": "i" } })
 
-      console.log('Activites', activites)
+      console.log('activities', activities)
   
     
-      return activites
+      return activities
     },
     me: async (parent, args, context) => {
       if (context.user) {
@@ -50,7 +50,7 @@ const resolvers = {
         
   },
   Mutation: {
-    saveActivity: async (parent, args) => {
+    addActivity: async (parent, args) => {
       console.log('we hit the save activity!!!', args)
       const activity = await Activity.create(args);
 

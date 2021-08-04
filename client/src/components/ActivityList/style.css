@@ -1,0 +1,11 @@
+.noActivities {
+    height: 500px;
+    border: 5px red solid;
+    margin: 1rem;
+    font-weight: bold;
+    
+}
+
+h3{
+    color: blue;
+}

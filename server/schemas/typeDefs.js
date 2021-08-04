@@ -8,7 +8,7 @@ const typeDefs = gql `
     type Activity {
         _id: ID!
         activityName: String!
-        description: String!
+        description: String
         materials: [String]
         setUpTime: Int
         tearDownTime: Int
@@ -25,18 +25,15 @@ const typeDefs = gql `
 		me: User
 		users: [User]
 		user(username: String!): User
-        allActivities: [Activity]
+        allActivities(username: String): [Activity]
         singleActivity(_id: ID!): Activity
         searchCategory(search: String): [Activity]
     }
+
     type Mutation {
-    login(email: String!, password: String!): User
-    addUser(username: String!, email: String!, password: String!): User
-    saveActivity(
-            activityName: String!
-            description: String!
-            materials: [String]
-		): Activity
+        login(email: String!, password: String!): User
+        addUser(username: String!, email: String!, password: String!): User
+        addActivity(activityName: String!, description: String, materials: [String], setUpTime: Int, tearDownTime: Int, categories: [String]): Activity
         
         deleteActivity(activityId: ID!): Activity
 		

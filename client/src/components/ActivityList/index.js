@@ -1,9 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import './style.css'
+
 const ActivityList = ({ activities }) => {
-    if(!activities.length) {
-        return <h3>No Activities Yet</h3>
+    if(!activities || !activities.length) {
+        return ( 
+        <div className="noActivities">
+            <h3>No Activities Yet</h3>
+        </div>
+        )
     }
 
     return (

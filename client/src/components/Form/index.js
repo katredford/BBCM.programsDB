@@ -8,23 +8,36 @@ import { QUERY_ALL_ACTIVITIES } from '../../utils/queries';
 
 function ActivityForm() {
     // for all form fields
-    const [formState, setFormState] = useState({activityName: "", description: "", materials: "", setUpTime: "", tearDownTime: ""})
+    const [formState, setFormState] = useState({activityName: "", description: "", materials: "", setUpTime: 0, tearDownTime: 0, categories: ""})
 
-    const [addActivity, {error}] = useMutation(ADD_ACTIVITY, {
+    const [addActivity, { error }] = useMutation(ADD_ACTIVITY, {
         update(cache, { data: { addActivity } }) {
             // read what is currently in the cache
-            const { formState } = cache.readQuery({ query: QUERY_ALL_ACTIVITIES });
+            const {activities} = cache.readQuery({ query: QUERY_ALL_ACTIVITIES }) || {activities: []};
+            console.log("----", activities)
+            console.log("----", addActivity)
 
             // prepend the newest thought to the front of the array
             cache.writeQuery({
                 query: QUERY_ALL_ACTIVITIES,
-                data: { formState: [addActivity, ...formState ] }
+                data: { activities: [addActivity, ...activities ] }
             })
         }
+
     });
 
     const handleChange = (event) => {
-        const {name, value} = event.target
+        let {name, value} = event.target
+        value = value.trim()
+
+        if (name === 'setUpTime' || name === 'tearDownTime') {
+            value = parseInt(value)
+        }
+        if (name === 'materials' || name === 'categories') {
+            value = value.split(',').map(v => v.trim())
+        }
+
+        console.log(name, value)
         setFormState({...formState, [name]: value});
     }
 
@@ -35,7 +48,7 @@ function ActivityForm() {
         try {
             // add activity to database
             await addActivity({
-                variables: { formState }
+                variables: formState
             });
         } catch (error) {
             console.error(error);
@@ -50,74 +63,74 @@ function ActivityForm() {
             <form id="activity-form">
                 {/* activity name input */}
                 <span>
-                    <label for="activityName">Activity Name</label>
-                    <input type="text" placeholder="Activity Name" onChange={handleChange} name="activityName" id="name" class="form-input" />
+                    <label htmlFor="activityName">Activity Name</label>
+                    <input type="text" placeholder="Activity Name" onChange={handleChange} name="activityName" id="activityName" className="form-input" />
                 </span>
 
                 {/* description textarea */}
                 <span>
-                    <label for="description">Description:</label>
-                    <textarea placeholder="Description" onChange={handleChange} name="description" id="description" class="form-input" />
+                    <label htmlFor="description">Description:</label>
+                    <textarea placeholder="Description" onChange={handleChange} name="description" id="description" className="form-input" />
                 </span>
 
                 {/* mess index 1-5 rating scale */}
                 {/* <span> */}
-                    {/* <label for="mess-index">Mess Index:</label>
-                    <input type="" placeholder="mess index" name="" id="" class="form-input" />
+                    {/* <label htmlFor="mess-index">Mess Index:</label>
+                    <input type="" placeholder="mess index" name="" id="" className="form-input" />
                 </span> */}
 
                 {/* safety index 1-5 rating scale */}
                 {/* <span>
-                    <label for=""></label>
-                    <input type="" placeholder="safety index" name="" id="" class="form-input" />
+                    <label htmlFor=""></label>
+                    <input type="" placeholder="safety index" name="" id="" className="form-input" />
                 </span> */}
 
                 {/* set up time dropdown with min ranges */}
                 {/* input? or, how to accept input from dropdown menu onto generated output*/}
                 <span>
-                    <label for="setUpTime">Set Up</label>
-                    <textarea name="setUpTime" placeholder="How many minutes?" id="setUpTime" class="form-input" onChange={handleChange}>
+                    <label htmlFor="setUpTime">Set Up</label>
+                    <textarea name="setUpTime" placeholder="How many minutes?" id="setUpTime" className="form-input" onChange={handleChange}>
 
                     </textarea>
                 </span>
 
                 {/* tear down time dropdown with min ranges*/}
                 <span>
-                    <label for="tearDownTime">Tear Down</label>
-                    <textarea name="tearDownTime" placeholder="How many minutes?" id="tearDownTime" class="form-input" onChange={handleChange}>
+                    <label htmlFor="tearDownTime">Tear Down</label>
+                    <textarea name="tearDownTime" placeholder="How many minutes?" id="tearDownTime" className="form-input" onChange={handleChange}>
                     </textarea>
                 </span>
 
                 {/* tools/materials needed checklist */}
                 <span>
-                    <label for="materials">Tools/Materials Needed:</label>
-                    <input type="text" placeholder="tools/materials" onChange={handleChange} name="materials" id="" class="form-input" />
+                    <label htmlFor="materials">Tools/Materials Needed:</label>
+                    <input type="text" placeholder="tools/materials" onChange={handleChange} name="materials" id="materials" className="form-input" />
                 </span>
 
                 {/* prompts maybe like add an extra field? */}
                 {/* <span>
-                    <label for="">Prompts:</label>
-                    <input type="" placeholder="prompts" name="" id="" class="form-input" />
+                    <label htmlFor="">Prompts:</label>
+                    <input type="" placeholder="prompts" name="" id="" className="form-input" />
                 </span> */}
 
                 {/* learning objectives maybe like add an extra field? */}
                 {/* <span>
-                    <label for="">Learning Objectives:</label>
-                    <input type="" placeholder="" name="" id="" class="form-input" />
+                    <label htmlFor="">Learning Objectives:</label>
+                    <input type="" placeholder="" name="" id="" className="form-input" />
                 </span> */}
 
                 {/* upload image - cloudinary? */}
                 {/* <span>
-                    <label for="">Upload Image</label>
-                    <input type="" placeholder="" name="" id="" class="form-input" />
+                    <label htmlFor="">Upload Image</label>
+                    <input type="" placeholder="" name="" id="" className="form-input" />
                 </span> */}
 
                 {/* can we hide the label when it comes to form output? */}
-                {/* category/hashtag? need data type */}
-                {/* <span> */}
-                    {/* <label for="">Categories/Hashtags</label>
-                    <input type="" placeholder="" name="" id="" class="form-input" />
-                </span> */}
+                {/* category/hashtag? need data type  */}
+                <span>
+                     <label htmlFor="categories">Categories/Hashtags</label>
+                    <input type="text" placeholder="categories" onChange={handleChange} name="categories" id="categories" className="form-input" />
+                </span>
                 <button onClick={handleSubmit}>Create Activity Form</button>
             </form>
             
