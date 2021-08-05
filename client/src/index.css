@@ -54,7 +54,8 @@ header button {
   font-size: 1.15rem;
   font-family: 'Montserrat', sans-serif;
   color: white;
-  transition: 0.4s; 
+  transition: 0.4s;
+  cursor: pointer; 
 }
 
 header button:hover {
@@ -71,6 +72,7 @@ header .login-btn {
   padding: 2.75rem;
   vertical-align: top;
   border-color: white;
+  cursor: pointer;
 }
 
 header .login-btn:hover {
@@ -119,30 +121,40 @@ header .login-btn:hover {
 }
 /* end hero styles */
 
-/* input form styles */
-#form-header, .activity-form label{
+/* input and login form styles */
+.form-header, 
+.activity-form label, 
+.login-header, 
+.login-form label {
   color: #273469;
-  
 }
 
-#form-header {
+.form-header, 
+.login-header {
   padding: 1.5rem 22rem 0 22rem;
   font-size: 3rem;
   text-align: center;
 }
 
-#wrapper {
+.activity-wrapper {
   padding-left: 22rem;
   padding-right: 22rem;
 }
 
-.activity-form {
+.login-wrapper {
+  padding-left: 30rem;
+  padding-right: 30rem;
+}
+
+.activity-form, 
+.login-form {
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
 }
 
-.activity-form label {
+.activity-form label,
+.login-form label {
   margin: 1.15rem 0 1rem 0;
   font-size: 1.5rem;
 }
@@ -151,14 +163,15 @@ header .login-btn:hover {
   border: 2px solid #d1d9f0;
   display: block;
   padding: 0.75rem;
-  font-size: 16px;
+  font-size: 1.15rem;
   color: #273469;
   width: 100%;
   margin-bottom: 2rem;
   border-radius: 0.5rem;
 }
 
-.activity-form button {
+.activity-form button,
+.login-form button {
   margin: 2rem 0 5rem 0;
   padding: 1rem;
   width: 50%;
@@ -171,23 +184,19 @@ header .login-btn:hover {
   transition: 0.4s;
   border-style: solid;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px; 
-   
+   cursor: pointer;
 }
 
-.min {
-  color: purple;
-}
-
-.activity-form button:hover {
+.activity-form button:hover,
+.login-form button:hover {
   color: #273469;
   background-color: #B4D2E7;
   border-color: #B4D2E7;
 }
-/* end input form styles */
+/* end input and login form styles */
 
 /* footer styles */
 #footer {
-  /* position covers up page content but we need it fixed to the bottom */
   position: absolute;
   left: 0;
   bottom: 0;
@@ -226,12 +235,12 @@ footer a:hover {
     font-size: 3rem;
   }
 
-  #wrapper {
+  .wrapper {
     padding-left: 5rem;
     padding-right: 5rem;
   }
 
-  #form-header {
+  .form-header {
     padding: 1.5rem 2rem 0 2rem;
   }
 }
