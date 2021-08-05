@@ -44,6 +44,7 @@ header h1 {
 }
 
 header button {
+  margin: 0 1rem;
   padding: 2rem;
   border-radius: 9999px;
   border-color: #273469;
@@ -52,20 +53,34 @@ header button {
   background-color: #273469;
   font-size: 1.15rem;
   font-family: 'Montserrat', sans-serif;
-  transition: 0.4s; 
-}
-
-header button a {
   color: white;
+  transition: 0.4s; 
 }
 
 header button:hover {
   background-color: #B4D2E7;
   border-color: #B4D2E7;
+  color: #273469;
 }
 
-header button:hover a {
-  color: #273469;
+header .login-btn {
+  background-image: url('./images/user-icon.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  padding: 2.75rem;
+  vertical-align: top;
+  border-color: white;
+}
+
+header .login-btn:hover {
+  background-image: url('./images/user-icon-hover.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  padding: 2.75rem;
+  vertical-align: top;
+  border-color: #B4D2E7;
 }
 /* end header styles */
 
