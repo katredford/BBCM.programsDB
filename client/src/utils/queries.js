@@ -19,11 +19,12 @@ export const QUERY_ALL_ACTIVITIES = gql`
 query activities($_id: ID!) {
   activities(_id: $_id) {
       _id
-      name
+      activityName
       description
       materials
       setUpTime
       tearDownTime
+      categories
     }
   }
 `;

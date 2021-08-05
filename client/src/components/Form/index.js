@@ -22,6 +22,7 @@ function ActivityForm() {
                 query: QUERY_ALL_ACTIVITIES,
                 data: { activities: [addActivity, ...activities ] }
             })
+            console.log('yello')
         }
 
     });
