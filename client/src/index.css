@@ -235,19 +235,25 @@ footer a:hover {
     font-size: 3rem;
   }
 
-  .wrapper {
+  .activity-wrapper {
     padding-left: 5rem;
     padding-right: 5rem;
   }
 
-  .form-header {
+  .login-wrapper {
+    padding-left: 7rem;
+    padding-right: 7rem;
+  }
+
+  .form-header,
+  .login-header {
     padding: 1.5rem 2rem 0 2rem;
   }
 }
 
 @media screen and (max-width: 768px) {
   #header {
-    justify-content: space-between;
+    justify-content: center;
   }
 
   .hero-text h2 {
