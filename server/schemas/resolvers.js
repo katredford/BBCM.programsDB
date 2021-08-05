@@ -98,11 +98,7 @@ const resolvers = {
       return message
     },
     
-<<<<<<< HEAD
-    
-=======
  
->>>>>>> feature/katie
      
        updateActivity: async (parent, args) => {
       console.log('we hit the UPDATE activity!!!', args)
