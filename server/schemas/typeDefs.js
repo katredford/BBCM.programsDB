@@ -35,8 +35,7 @@ const typeDefs = gql `
         addUser(username: String!, email: String!, password: String!): User
         addActivity(activityName: String!, description: String, materials: [String], setUpTime: Int, tearDownTime: Int, categories: [String]): Activity
         
-        deleteActivity(activityId: ID!): Activity
-		
+        deleteActivity(activityId: ID!): Activity	
 	}
 `;
 

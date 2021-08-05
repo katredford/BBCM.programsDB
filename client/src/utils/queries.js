@@ -16,8 +16,8 @@ import gql from 'graphql-tag';
 // `;
 
 export const QUERY_ALL_ACTIVITIES = gql`
-query activities($_id: ID!) {
-  activities(_id: $_id) {
+query allActivities($username: String) {
+  allActivities(username: $username) {
       _id
       activityName
       description

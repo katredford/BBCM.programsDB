@@ -1,16 +1,15 @@
 import React from "react";
 import Header from "../components/Header";
 import Hero from '../components/Hero';
-import Form from "../components/Form";
-// import Nav from "../components/Nav";
 import ActivityList from "../components/ActivityList";
 
 import { useQuery } from '@apollo/react-hooks';
-import { QUERY_ALL_ACTIVITIES } from "../utils/queries";
+import { QUERY_ALL_ACTIVITIES } from '../utils/queries';
 
 const Home = () => {
-    const { loading, data } = useQuery(QUERY_ALL_ACTIVITIES)
-    const activities = data?.activities || [];
+    const { loading, data } = useQuery(QUERY_ALL_ACTIVITIES);
+    const activities = data?.allActivities || [];
+
     // const activities = [
     //     {
     //        activityName: 'testy',
@@ -23,12 +22,18 @@ const Home = () => {
     // ]
 
     return (
-       <div>
-           <Header />
-           <Hero />
-            <ActivityList activities={activities} />
-           {/* <Nav /> */}
-       </div>
+       <main>
+            <div>
+                <Header />
+                <Hero />
+                {loading ? (
+                    <div>Loading...</div>
+                ) : (
+                    <ActivityList activities={activities} />
+                )}
+                {/* <Nav /> */}
+            </div>
+       </main>
     );
 };
 

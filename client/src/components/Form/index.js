@@ -1,7 +1,7 @@
 // import react
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { useMutation } from '@apollo/client';
+import { useMutation } from '@apollo/react-hooks';
 import { ADD_ACTIVITY } from '../../utils/mutations';
 import { QUERY_ALL_ACTIVITIES } from '../../utils/queries';
 
@@ -13,14 +13,14 @@ function ActivityForm() {
     const [addActivity, { error }] = useMutation(ADD_ACTIVITY, {
         update(cache, { data: { addActivity } }) {
             // read what is currently in the cache
-            const {activities} = cache.readQuery({ query: QUERY_ALL_ACTIVITIES }) || {activities: []};
-            console.log("----", activities)
+            const {allActivities} = cache.readQuery({ query: QUERY_ALL_ACTIVITIES }) || {allActivities: []};
+            console.log("----", allActivities)
             console.log("----", addActivity)
 
             // prepend the newest thought to the front of the array
             cache.writeQuery({
                 query: QUERY_ALL_ACTIVITIES,
-                data: { activities: [addActivity, ...activities ] }
+                data: { allActivities: [addActivity, ...allActivities ] }
             })
             console.log('yello')
         }
