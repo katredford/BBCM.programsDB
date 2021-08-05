@@ -84,31 +84,31 @@ const resolvers = {
     },
 
       
-    deleteActivity: async (root, { activityId }) => {
-      console.log('We r in the resolver delete!!!', activityId)
+    // deleteActivity: async (root, { activityId }) => {
+    //   console.log('We r in the resolver delete!!!', activityId)
           
-      let message = await Activity.remove({ _id: activityId }, function (err) {
-        console.log('We deleted!!!', err)
-        return 'U r deleted!'
-      });
+    //   let message = await Activity.remove({ _id: activityId }, function (err) {
+    //     console.log('We deleted!!!', err)
+    //     return 'U r deleted!'
+    //   });
    
 
-      message = { message: 'U r deleted!' }
-      console.log('message!!', message)
-      return message
-    },
+    //   message = { message: 'U r deleted!' }
+    //   console.log('message!!', message)
+    //   return message
+    // },
     
  
      
-       updateActivity: async (parent, args) => {
-      console.log('we hit the UPDATE activity!!!', args)
-         const activity = await Activity.findByIdAndUpdate(
-           { _id: args.activityId },
-            args, {new: true}
-         );
+    //    updateActivity: async (parent, args) => {
+    //   console.log('we hit the UPDATE activity!!!', args)
+    //      const activity = await Activity.findByIdAndUpdate(
+    //        { _id: args.activityId },
+    //         args, {new: true}
+    //      );
 
-      return activity;
-    },
+    //   return activity;
+    // },
    
       }
     
