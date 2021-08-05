@@ -144,7 +144,7 @@ header button:hover a {
 }
 
 .activity-form button {
-  margin: 2rem 0;
+  margin: 2rem 0 5rem 0;
   padding: 1rem;
   width: 50%;
   border-radius: 9999px;
@@ -197,15 +197,54 @@ footer a {
 footer a:hover {
   color: #B4D2E7;
 }
-
 /* end footer styles */
 
-.tutor {
-  display: flex;
-  flex-direction: column;
+/* media queries for smaller screen sizes */
+@media screen and (max-width: 980px) {
+  .hero-text h2 {
+    line-height: 4.25rem;
+    font-size: 4.15rem;
+  }
+
+  .hero-text h3 {
+    line-height: 2rem;
+    font-size: 3rem;
+  }
+
+  #wrapper {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  #form-header {
+    padding: 1.5rem 2rem 0 2rem;
+  }
 }
 
-.tutor-inner {
-  /* if available space, element grow to it */
-  flex-grow: 1;
+@media screen and (max-width: 768px) {
+  #header {
+    justify-content: space-between;
+  }
+
+  .hero-text h2 {
+    line-height: 4rem;
+    font-size: 4rem;    
+  }
+
+  .hero-text h3{
+    line-height: 3.15rem;
+    font-size: 2.75rem;    
+  }
 }
+
+@media screen and (max-width: 575px) {
+  .hero-text h2 {
+    font-size: 3.75rem;
+    line-height: 4rem;
+  }
+
+  .hero-text h3{
+    line-height: 2.75rem;
+  }
+}
+/* end media queries */
