@@ -26,10 +26,7 @@ const ActivityList = ({ activities }) => {
                         </p>
                     <div className="card-time">
                         <p>
-                            Set Up: {activity.setUpTime} min
-                        </p>
-                        <p>
-                            Tear Down: {activity.tearDownTime} min
+                            Set Up: {activity.setUpTime} min Tear Down: {activity.tearDownTime} min
                         </p>
                     </div>
                     <div className="card-description">
