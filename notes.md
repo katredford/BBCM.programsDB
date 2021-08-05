@@ -29,4 +29,7 @@ npm install jwt-decode
   "email": "test2@test.com"
 }
 
+// ATLAS USER!!
+{username: 'katie', email:'katie@katie.com', password: '123456789'}
+
 server : npm install jsonwebtoken
