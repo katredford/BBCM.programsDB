@@ -34,12 +34,14 @@ function Nav() {
     }
 
     return (
+        <div>
         <header className="flex-row px-1">
 
             <nav>
                 {showNavigation()}
             </nav>
         </header>
+        </div>
     );
 }
 

@@ -1,12 +1,12 @@
 import React from "react";
 //import Auth from "../../utils/auth";
-import { Link } from "react-router-dom";
+
 
 import './specialtyStyleCSS/details.css';
 
 import {QUERY_SINGLE_ACTIVITY} from '../utils/queries'
 
-import { gql, useQuery } from '@apollo/client';
+import { gql, useQuery } from '@apollo/react-hooks';
 function Detail(props) {
 
     console.log('this.props.match.params.id', props.match.params.id)

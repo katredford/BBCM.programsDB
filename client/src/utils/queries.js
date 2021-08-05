@@ -15,20 +15,19 @@ import gql from 'graphql-tag';
 //   }
 // `;
 
-// export const QUERY_ALL_ACTIVITIES = gql`
-//   {
-//     activities {
-//       _id
-//       name
-//       description
-//       materials
-//       setUpTime
-//       tearDownTime {
-//         name
-//       }
-//     }
-//   }
-// `;
+export const QUERY_ALL_ACTIVITIES = gql`
+query allActivities($username: String) {
+  allActivities(username: $username) {
+      _id
+      activityName
+      description
+      materials
+      setUpTime
+      tearDownTime
+      categories
+    }
+  }
+`;
 
 // export const QUERY_USER = gql`
 // {
@@ -58,6 +57,7 @@ query singleActivity($_id: ID!) {
         materials
         setUpTime
         tearDownTime
+        categories
     }
   }
 `;

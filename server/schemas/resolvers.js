@@ -19,12 +19,12 @@ const resolvers = {
     },
     searchCategory: async (parent, { search }, context) => {
 
-      const activites = await Activity.find({ "categories": { "$regex": search, "$options": "i" } })
+      const activities = await Activity.find({ "categories": { "$regex": search, "$options": "i" } })
 
-      console.log('Activites', activites)
+      console.log('activities', activities)
   
     
-      return activites
+      return activities
     },
     me: async (parent, args, context) => {
       if (context.user) {
@@ -51,7 +51,7 @@ const resolvers = {
         
   },
   Mutation: {
-    saveActivity: async (parent, args) => {
+    addActivity: async (parent, args) => {
       console.log('we hit the save activity!!!', args)
       const activity = await Activity.create(args);
 
@@ -84,31 +84,31 @@ const resolvers = {
     },
 
       
-    deleteActivity: async (root, { activityId }) => {
-      console.log('We r in the resolver delete!!!', activityId)
+    // deleteActivity: async (root, { activityId }) => {
+    //   console.log('We r in the resolver delete!!!', activityId)
           
-      let message = await Activity.remove({ _id: activityId }, function (err) {
-        console.log('We deleted!!!', err)
-        return 'U r deleted!'
-      });
+    //   let message = await Activity.remove({ _id: activityId }, function (err) {
+    //     console.log('We deleted!!!', err)
+    //     return 'U r deleted!'
+    //   });
    
 
-      message = { message: 'U r deleted!' }
-      console.log('message!!', message)
-      return message
-    },
+    //   message = { message: 'U r deleted!' }
+    //   console.log('message!!', message)
+    //   return message
+    // },
     
  
      
-       updateActivity: async (parent, args) => {
-      console.log('we hit the UPDATE activity!!!', args)
-         const activity = await Activity.findByIdAndUpdate(
-           { _id: args.activityId },
-            args, {new: true}
-         );
+    //    updateActivity: async (parent, args) => {
+    //   console.log('we hit the UPDATE activity!!!', args)
+    //      const activity = await Activity.findByIdAndUpdate(
+    //        { _id: args.activityId },
+    //         args, {new: true}
+    //      );
 
-      return activity;
-    },
+    //   return activity;
+    // },
    
       }
     
