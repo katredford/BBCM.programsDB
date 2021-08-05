@@ -8,6 +8,7 @@ body {
   padding: 0 0 124px 0;
   min-height: 100%;
   font-family: 'Montserrat', sans-serif;
+  background-color: #dcebf7;
 
 
   -webkit-font-smoothing: antialiased;
@@ -104,44 +105,75 @@ header button:hover a {
 /* end hero styles */
 
 /* input form styles */
-#form-section {
-  background-color: purple;
+#form-header, .activity-form label{
+  color: #273469;
+  
 }
 
-#form-section h1 {
-  padding: 1.5rem;
+#form-header {
+  padding: 1.5rem 22rem 0 22rem;
   font-size: 3rem;
   text-align: center;
 }
 
-#form-wrapper {
-  justify-content: center;
+#wrapper {
+  padding-left: 22rem;
+  padding-right: 22rem;
 }
 
-#form-wrapper form {
+.activity-form {
   justify-content: center;
-  text-align: center;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-column-gap: 3rem;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.full-width {
-  grid-column: 1 / 3;
+.activity-form label {
+  margin: 1.15rem 0 1rem 0;
+  font-size: 1.5rem;
 }
 
-/* #activity-form {
-  justify-content: center;
-  
+.form-input {
+  border: 2px solid #d1d9f0;
+  display: block;
+  padding: 0.75rem;
+  font-size: 16px;
+  color: #273469;
+  width: 100%;
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+}
 
-} */
+.activity-form button {
+  margin: 2rem 0;
+  padding: 1rem;
+  width: 50%;
+  border-radius: 9999px;
+  background-color: #273469;
+  border-color: #273469;
+  font-size: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  transition: 0.4s;
+  border-style: solid;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px; 
+   
+}
 
+.min {
+  color: purple;
+}
+
+.activity-form button:hover {
+  color: #273469;
+  background-color: #B4D2E7;
+  border-color: #B4D2E7;
+}
 /* end input form styles */
 
 /* footer styles */
 #footer {
   /* position covers up page content but we need it fixed to the bottom */
-  position: fixed;
+  position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
