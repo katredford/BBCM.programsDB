@@ -1,3 +1,11 @@
+:root {
+  --primary-color: #273469;
+  --secondary-color: #B4D2E7;
+  --tertiary-color: #dcebf7;
+  --quaternary-color: #d1d9f0;
+  --light: white;
+}
+
 html {
   position: relative;
   min-height: 100%;
@@ -8,7 +16,7 @@ body {
   padding: 0 0 124px 0;
   min-height: 100%;
   font-family: 'Montserrat', sans-serif;
-  background-color: #dcebf7;
+  background-color: var(--tertiary-color);
 
 
   -webkit-font-smoothing: antialiased;
@@ -40,28 +48,28 @@ header a {
 }
 
 header h1 {
-  color: #273469;
+  color: var(--primary-color);
 }
 
 header button {
   margin: 0 1rem;
   padding: 2rem;
   border-radius: 9999px;
-  border-color: #273469;
+  border-color: var(--primary-color);
   border-style: solid;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px; 
-  background-color: #273469;
+  background-color: var(--primary-color);
   font-size: 1.15rem;
   font-family: 'Montserrat', sans-serif;
-  color: white;
+  color: var(--light);
   transition: 0.4s;
   cursor: pointer; 
 }
 
 header button:hover {
-  background-color: #B4D2E7;
-  border-color: #B4D2E7;
-  color: #273469;
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 header .login-btn {
@@ -71,7 +79,7 @@ header .login-btn {
   background-position: center;
   padding: 2.75rem;
   vertical-align: top;
-  border-color: white;
+  border-color: var(--light);
   cursor: pointer;
 }
 
@@ -82,7 +90,7 @@ header .login-btn:hover {
   background-position: bottom;
   padding: 2.75rem;
   vertical-align: top;
-  border-color: #B4D2E7;
+  border-color: var(--secondary-color);
 }
 /* end header styles */
 
@@ -90,8 +98,6 @@ header .login-btn:hover {
 #hero {
   margin: 0px;
   padding: 5rem;
-  /* width: 100vw; */
-  /* height: 75vh; */
   background-image: url('./images/coasted-media-ivKvtooE4D0-unsplash.jpg');
   background-position: center;
   background-size: cover;
@@ -107,7 +113,7 @@ header .login-btn:hover {
 }
 
 .hero-text h2, h3 {
-  color: white;
+  color: var(--light);
 }
 
 .hero-text h2 {
@@ -126,7 +132,7 @@ header .login-btn:hover {
 .activity-form label, 
 .login-header, 
 .login-form label {
-  color: #273469;
+  color: var(--primary-color);
 }
 
 .form-header, 
@@ -160,11 +166,11 @@ header .login-btn:hover {
 }
 
 .form-input {
-  border: 2px solid #d1d9f0;
+  border: 2px solid var(--quaternary-color);
   display: block;
   padding: 0.75rem;
   font-size: 1.15rem;
-  color: #273469;
+  color: var(--primary-color);
   width: 100%;
   margin-bottom: 2rem;
   border-radius: 0.5rem;
@@ -176,11 +182,11 @@ header .login-btn:hover {
   padding: 1rem;
   width: 50%;
   border-radius: 9999px;
-  background-color: #273469;
-  border-color: #273469;
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
   font-size: 2rem;
   font-family: 'Montserrat', sans-serif;
-  color: white;
+  color: var(--light);
   transition: 0.4s;
   border-style: solid;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px; 
@@ -189,9 +195,9 @@ header .login-btn:hover {
 
 .activity-form button:hover,
 .login-form button:hover {
-  color: #273469;
-  background-color: #B4D2E7;
-  border-color: #B4D2E7;
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
 }
 /* end input and login form styles */
 
@@ -202,8 +208,8 @@ header .login-btn:hover {
   bottom: 0;
   width: 100%;
   overflow: hidden;
-  background-color: #273469;
-  color: white;
+  background-color: var(--primary-color);
+  color: var(--light);
 }
 
 footer div {
@@ -213,13 +219,13 @@ footer div {
 }
 
 footer a {
-  color: white;
+  color: var(--light);
   text-decoration: none;
   transition: 0.4s;
 }
 
 footer a:hover {
-  color: #B4D2E7;
+  color: var(--secondary-color);
 }
 /* end footer styles */
 
