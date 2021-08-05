@@ -17,6 +17,7 @@ const server = new ApolloServer({
   resolvers
 });
 
+const path = require('path')
 const {Activity} = require('./models')
 
 // integrate our Apollo server with the Express application as middleware

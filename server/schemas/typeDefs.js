@@ -21,6 +21,15 @@ const typeDefs = gql `
 		email: String
 	}
 
+    type DeleteMessage {
+        message: String
+    }
+
+    type Auth {
+        token: ID!
+        user: User
+    }
+
     type Query {
 		me: User
 		users: [User]
@@ -30,15 +39,28 @@ const typeDefs = gql `
         searchCategory(search: String): [Activity]
     }
     type Mutation {
-    login(email: String!, password: String!): User
+    login(email: String!, password: String!): Auth
     addUser(username: String!, email: String!, password: String!): User
     saveActivity(
             activityName: String!
             description: String!
             materials: [String]
+            setUpTime: Int
+            tearDownTime: Int
+            categories: [String]
 		): Activity
         
-        deleteActivity(activityId: ID!): Activity
+        deleteActivity(activityId: ID!): DeleteMessage
+        updateActivity(
+            activityId: ID!
+            activityName: String
+            description: String
+            materials: [String]
+            setUpTime: Int
+        tearDownTime: Int
+        categories: [String]
+        ): Activity
+
 		
 	}
 `;
@@ -47,5 +69,3 @@ const typeDefs = gql `
 module.exports = typeDefs;
 
 
-// login(email: String!, password: String!): User
-//     addUser(username: String!, email: String!, password: String!): User

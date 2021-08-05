@@ -23,7 +23,7 @@ const activitySchema = new Schema(
         materials: [
             {
 			type: String,
-            required: true,
+            required: false,
       		maxlength: 28
             },
         ],
