@@ -202,11 +202,13 @@ footer a:hover {
 /* media queries for smaller screen sizes */
 @media screen and (max-width: 980px) {
   .hero-text h2 {
-    line-height: 5rem;
+    line-height: 3.25rem;
+    font-size: 4rem;
   }
 
   .hero-text h3 {
-    line-height: 4rem;
+    line-height: 2rem;
+    font-size: 3rem;
   }
 
   #wrapper {
@@ -220,7 +222,19 @@ footer a:hover {
 }
 
 @media screen and (max-width: 768px) {
-  
+  #header {
+    justify-content: space-between;
+  }
+
+  .hero-text h2 {
+    font-size: 3.5rem;
+    line-height: 3.15rem;
+  }
+
+  .hero-text h3{
+    font-size: 2.5rem;
+    line-height: 0;
+  }
 }
 
 @media screen and (max-width: 575px) {
