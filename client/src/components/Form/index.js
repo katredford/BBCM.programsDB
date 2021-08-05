@@ -1,6 +1,5 @@
 // import react
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/react-hooks';
 import { ADD_ACTIVITY } from '../../utils/mutations';
 import { QUERY_ALL_ACTIVITIES } from '../../utils/queries';

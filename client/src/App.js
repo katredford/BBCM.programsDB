@@ -5,13 +5,16 @@ import ApolloClient from 'apollo-boost';
 // import { ApolloProvider } from '@apollo/react-hooks';
 
 
+import Header from "./components/Header";
+import Hero from "./components/Hero";
 import Footer from './components/Footer';
 
-import Home from "./pages/Home";
+import Home from './pages/Activities';
 import ActivityForm from "./pages/Form";
+import Activities from "./pages/Activities";
 import Login from "./pages/Login";
 import Detail from './pages/Detail';
-import ActivityList from "./components/ActivityList";
+
 
 const httpLink = createHttpLink({
   uri: 'http://localhost:3001/graphql'
@@ -36,17 +39,15 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <div>
-          <Home />
-          {/* <Header />
-          <Hero /> */}
-          {/* <Nav /> */}
-          <Switch>
-            <Route exact path="/" page={Home} />
-            <Route exact path="/login" component={Login} />
-            <Route exact path="/form" component={ActivityForm} />
-            <Route exact path="/activity" component={ActivityList} />
-            <Route exact path="/activities/:id" component={Detail} />
-          </Switch>          
+          <Header />
+          <Hero />
+            <Switch>
+              <Route exact path="/" page={Home} />
+              <Route exact path="/login" component={Login} />
+              <Route exact path="/form" component={ActivityForm} />
+              <Route exact path="/activities" component={Activities} />
+              <Route exact path="/activities/:id" component={Detail} />
+            </Switch>          
           <Footer />
         </div>
       </Router>

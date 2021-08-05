@@ -121,9 +121,10 @@ header .login-btn:hover {
   line-height: 4rem;
 }
 
-.hero-text h3 {
+.hero-text a {
   font-size: 3rem;
   line-height: 1rem;
+  text-decoration: none;
 }
 /* end hero styles */
 

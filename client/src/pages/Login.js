@@ -45,8 +45,6 @@ function Login(props) {
                             onChange={handleChange}
                         />
 
-
-                   
                         <label htmlFor="pwd">Password:</label>
                         <input
                             placeholder="******"
@@ -57,13 +55,11 @@ function Login(props) {
                             onChange={handleChange}
                         />
                   
-
                     {
                         error ? <div>
                             <p className="error-text" >The provided credentials are incorrect</p>
                         </div> : null
                     }
-
                     
                         <button type="submit">
                             Submit!
