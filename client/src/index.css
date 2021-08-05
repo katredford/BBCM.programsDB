@@ -1,19 +1,26 @@
+:root {
+  --primary-color: #273469;
+  --secondary-color: #B4D2E7;
+  --tertiary-color: #dcebf7;
+  --quaternary-color: #d1d9f0;
+  --light: white;
+}
+
 html {
   position: relative;
   min-height: 100%;
 }
 
 body {
-  margin: 0 0 100px 0;
+  margin: 0;
+  padding: 0 0 124px 0;
+  min-height: 100%;
   font-family: 'Montserrat', sans-serif;
+  background-color: var(--tertiary-color);
+
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }
 
 #header, #hero {
@@ -41,38 +48,56 @@ header a {
 }
 
 header h1 {
-  color: #273469;
+  color: var(--primary-color);
 }
 
 header button {
+  margin: 0 1rem;
   padding: 2rem;
   border-radius: 9999px;
-  border-color: #273469;
+  border-color: var(--primary-color);
   border-style: solid;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px; 
-  background-color: #273469;
+  background-color: var(--primary-color);
   font-size: 1.15rem;
   font-family: 'Montserrat', sans-serif;
-  transition: 0.4s; 
-}
-
-header button a {
-  color: white;
+  color: var(--light);
+  transition: 0.4s;
+  cursor: pointer; 
 }
 
 header button:hover {
-  background-color: #B4D2E7;
-  border-color: #B4D2E7;
-  color: #273469;
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+header .login-btn {
+  background-image: url('./images/user-icon.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  padding: 2.75rem;
+  vertical-align: top;
+  border-color: var(--light);
+  cursor: pointer;
+}
+
+header .login-btn:hover {
+  background-image: url('./images/user-icon-hover.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  padding: 2.75rem;
+  vertical-align: top;
+  border-color: var(--secondary-color);
 }
 /* end header styles */
 
 /* hero styles */
 #hero {
   margin: 0px;
-  padding: 11rem;
-  /* width: 100vw;
-  height: 100vh; */
+  padding: 5rem;
   background-image: url('./images/coasted-media-ivKvtooE4D0-unsplash.jpg');
   background-position: center;
   background-size: cover;
@@ -82,8 +107,13 @@ header button:hover {
   text-align: center;
 }
 
+#hero.home {
+  height: 75vh;
+  padding: 11rem;
+}
+
 .hero-text h2, h3 {
-  color: white;
+  color: var(--light);
 }
 
 .hero-text h2 {
@@ -97,26 +127,79 @@ header button:hover {
 }
 /* end hero styles */
 
-/* Modal styles */
-.modalBackdrop {
-	background: rgba(0, 0, 0, .65);
-	bottom: 0;
-	left: 0;
-	overflow: auto;
-	position: fixed;
-	right: 0;
-	top: 0;
-	z-index: 1;
+/* input and login form styles */
+.form-header, 
+.activity-form label, 
+.login-header, 
+.login-form label {
+  color: var(--primary-color);
 }
 
-.modalContainer {
-	background: var(--darker);
-	border-radius: 5px;
-	max-width: 100%;
-	margin: 50px auto;
-	padding: 15px;
-	width: 960px;
+.form-header, 
+.login-header {
+  padding: 1.5rem 22rem 0 22rem;
+  font-size: 3rem;
+  text-align: center;
 }
+
+.activity-wrapper {
+  padding-left: 22rem;
+  padding-right: 22rem;
+}
+
+.login-wrapper {
+  padding-left: 30rem;
+  padding-right: 30rem;
+}
+
+.activity-form, 
+.login-form {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.activity-form label,
+.login-form label {
+  margin: 1.15rem 0 1rem 0;
+  font-size: 1.5rem;
+}
+
+.form-input {
+  border: 2px solid var(--quaternary-color);
+  display: block;
+  padding: 0.75rem;
+  font-size: 1.15rem;
+  color: var(--primary-color);
+  width: 100%;
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+}
+
+.activity-form button,
+.login-form button {
+  margin: 2rem 0 5rem 0;
+  padding: 1rem;
+  width: 50%;
+  border-radius: 9999px;
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  font-size: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--light);
+  transition: 0.4s;
+  border-style: solid;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px; 
+   cursor: pointer;
+}
+
+.activity-form button:hover,
+.login-form button:hover {
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+/* end input and login form styles */
 
 /* footer styles */
 #footer {
@@ -125,8 +208,8 @@ header button:hover {
   bottom: 0;
   width: 100%;
   overflow: hidden;
-  background-color: #273469;
-  color: white;
+  background-color: var(--primary-color);
+  color: var(--light);
 }
 
 footer div {
@@ -136,21 +219,68 @@ footer div {
 }
 
 footer a {
-  color: white;
+  color: var(--light);
   text-decoration: none;
   transition: 0.4s;
 }
 
 footer a:hover {
-  color: #B4D2E7;
+  color: var(--secondary-color);
 }
-
 /* end footer styles */
 
-.login {
-  margin-bottom: 100px;
+/* media queries for smaller screen sizes */
+@media screen and (max-width: 980px) {
+  .hero-text h2 {
+    line-height: 4.25rem;
+    font-size: 4.15rem;
+  }
+
+  .hero-text h3 {
+    line-height: 2rem;
+    font-size: 3rem;
+  }
+
+  .activity-wrapper {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  .login-wrapper {
+    padding-left: 7rem;
+    padding-right: 7rem;
+  }
+
+  .form-header,
+  .login-header {
+    padding: 1.5rem 2rem 0 2rem;
+  }
 }
 
-#activity-form {
-  height: 600px;
+@media screen and (max-width: 768px) {
+  #header {
+    justify-content: center;
+  }
+
+  .hero-text h2 {
+    line-height: 4rem;
+    font-size: 4rem;    
+  }
+
+  .hero-text h3{
+    line-height: 3.15rem;
+    font-size: 2.75rem;    
+  }
 }
+
+@media screen and (max-width: 575px) {
+  .hero-text h2 {
+    font-size: 3.75rem;
+    line-height: 4rem;
+  }
+
+  .hero-text h3{
+    line-height: 2.75rem;
+  }
+}
+/* end media queries */

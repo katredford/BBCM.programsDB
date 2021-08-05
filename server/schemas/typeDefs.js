@@ -21,6 +21,15 @@ const typeDefs = gql `
 		email: String
 	}
 
+    type DeleteMessage {
+        message: String
+    }
+
+    type Auth {
+        token: ID!
+        user: User
+    }
+
     type Query {
 		me: User
 		users: [User]
@@ -43,5 +52,3 @@ const typeDefs = gql `
 module.exports = typeDefs;
 
 
-// login(email: String!, password: String!): User
-//     addUser(username: String!, email: String!, password: String!): User

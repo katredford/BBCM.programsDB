@@ -58,85 +58,95 @@ function ActivityForm() {
     
     return (
         <section>
-            
-            <h1>Enter Activity Info</h1>
-
-            <form id="activity-form">
-                {/* activity name input */}
-                <span>
+            <h1 className="form-header">Enter Activity Info</h1>
+            <div className="activity-wrapper">
+                <form id="activity-form">
+                    {/* activity name input */}
                     <label htmlFor="activityName">Activity Name</label>
                     <input type="text" placeholder="Activity Name" onChange={handleChange} name="activityName" id="activityName" className="form-input" />
-                </span>
 
-                {/* description textarea */}
-                <span>
+                    {/* description textarea */}
                     <label htmlFor="description">Description:</label>
-                    <textarea placeholder="Description" onChange={handleChange} name="description" id="description" className="form-input" />
-                </span>
+                    <textarea placeholder="Description" onChange={handleChange} name="description" id="description" className="form-input" rows="5" />
 
-                {/* mess index 1-5 rating scale */}
-                {/* <span> */}
-                    {/* <label htmlFor="mess-index">Mess Index:</label>
-                    <input type="" placeholder="mess index" name="" id="" className="form-input" />
-                </span> */}
-
-                {/* safety index 1-5 rating scale */}
-                {/* <span>
-                    <label htmlFor=""></label>
-                    <input type="" placeholder="safety index" name="" id="" className="form-input" />
-                </span> */}
-
-                {/* set up time dropdown with min ranges */}
-                {/* input? or, how to accept input from dropdown menu onto generated output*/}
-                <span>
+                    {/* set up time--accepts number */}
                     <label htmlFor="setUpTime">Set Up</label>
-                    <textarea name="setUpTime" placeholder="How many minutes?" id="setUpTime" className="form-input" onChange={handleChange}>
+                    <textarea name="setUpTime" placeholder="How many minutes?" id="setUpTime" className="form-input" onChange={handleChange} />
 
-                    </textarea>
-                </span>
-
-                {/* tear down time dropdown with min ranges*/}
-                <span>
+                    {/* tear down time --accepts number*/}
                     <label htmlFor="tearDownTime">Tear Down</label>
-                    <textarea name="tearDownTime" placeholder="How many minutes?" id="tearDownTime" className="form-input" onChange={handleChange}>
-                    </textarea>
-                </span>
+                    <textarea name="tearDownTime" placeholder="How many minutes?" id="tearDownTime" className="form-input" onChange={handleChange} />
+                        
 
-                {/* tools/materials needed checklist */}
-                <span>
+                    {/* tools/materials needed checklist */}
                     <label htmlFor="materials">Tools/Materials Needed:</label>
                     <input type="text" placeholder="tools/materials" onChange={handleChange} name="materials" id="materials" className="form-input" />
-                </span>
 
-                {/* prompts maybe like add an extra field? */}
-                {/* <span>
-                    <label htmlFor="">Prompts:</label>
-                    <input type="" placeholder="prompts" name="" id="" className="form-input" />
-                </span> */}
-
-                {/* learning objectives maybe like add an extra field? */}
-                {/* <span>
-                    <label htmlFor="">Learning Objectives:</label>
-                    <input type="" placeholder="" name="" id="" className="form-input" />
-                </span> */}
-
-                {/* upload image - cloudinary? */}
-                {/* <span>
-                    <label htmlFor="">Upload Image</label>
-                    <input type="" placeholder="" name="" id="" className="form-input" />
-                </span> */}
-
-                {/* can we hide the label when it comes to form output? */}
-                {/* category/hashtag? need data type  */}
-                <span>
-                     <label htmlFor="categories">Categories/Hashtags</label>
+                    <label htmlFor="categories">Categories/Hashtags</label>
                     <input type="text" placeholder="categories" onChange={handleChange} name="categories" id="categories" className="form-input" />
-                </span>
-                <button onClick={handleSubmit}>Create Activity Form</button>
-            </form>
-            
+                    <button onClick={handleSubmit}>Create Activity Form</button>
+                </form>
+            </div>
         </section>
-    );
-}
+    )}
 
 export default ActivityForm;
+// /* import React from 'react';
+// import { useHistory } from 'react-router-dom';
+
+// function ActivityForm() {
+//     const history = useHistory();
+
+//     const handleSubmit = function(e) {
+//         e.preventDefault();
+//         // submit form input to db here, then redirect to the home page "/"
+//         history.push("/");
+//     }; */
+
+//     return (
+//         <section>
+            
+
+           
+//                 <form className="activity-form">
+//                     {/* activity name input */}
+//                     <label for="activityName">Activity Name</label>
+//                     <input type="text" placeholder="Activity Name" name="activityName" id="name" className="form-input" />
+                    
+//                     {/* description textarea */}                    
+//                     <label for="description">Description</label>
+//                     <textarea placeholder="Description" name="description" id="description" className="form-input" rows="5"/>
+                    
+//                     {/* set up time dropdown with min ranges */}                    
+//                     <label for="set-up">Set Up</label>
+//                     <select name="set-up" id="setup-time" className="form-input">
+//                         <option value="5 minutes">5 minutes</option>
+//                         <option value="10 minutes">10 minutes</option>
+//                         <option value="15 minutes">15 minutes</option>
+//                         <option value="20 minutes">20 minutes</option>
+//                     </select>
+                        
+//                     {/* tear down time dropdown with min ranges*/}                    
+//                     <label for="tearDown">Tear Down</label>
+//                     <select name="tearDown" className="form-input">
+//                         <option value="5 minutes">5 minutes</option>
+//                         <option value="10 minutes">10 minutes</option>
+//                         <option value="15 minutes">15 minutes</option>
+//                         <option value="20 minutes">20 minutes</option>
+//                     </select>
+                    
+//                     {/* tools/materials needed */}                   
+//                     <label for="toolsMaterials">Tools/Materials Needed</label>
+//                     <input type="input" placeholder="Tools/Materials" name="toolsMaterials" className="form-input" />
+                    
+//                     {/* category/hashtag */}                    
+//                     <label for="categories">Categories</label>
+//                     <input type="input" placeholder="Categories" name="categories" className="form-input" />
+
+//                     <button type="submit" onClick={handleSubmit}>Submit!</button>
+//                 </form>
+            
+//         </section>
+//     );
+// }
+

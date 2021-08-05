@@ -9,7 +9,12 @@ function Header() {
             <a href="/">
                 <h1>BBCM Programs</h1>
             </a>
-            <button><Link to="/form">Add New Activity</Link></button>
+
+            <span>
+            <Link to="/form"><button>Add New Activity</button></Link>
+            
+            <Link to="/login"><button className="login-btn"></button></Link>
+            </span>            
         </header>
     );
 }

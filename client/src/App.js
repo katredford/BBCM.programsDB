@@ -46,7 +46,7 @@ function App() {
             <Route exact path="/form" component={ActivityForm} />
             <Route exact path="/activity" component={ActivityList} />
             <Route exact path="/activities/:id" component={Detail} />
-          </Switch>
+          </Switch>          
           <Footer />
         </div>
       </Router>
