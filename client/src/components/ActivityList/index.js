@@ -16,26 +16,31 @@ const ActivityList = ({ activities }) => {
         <div>
             {activities &&
                 activities.map(activity => (
-                    <div key={activity._id}>
-                        <p>
+                    <div key={activity._id} className="card">
+                        <p className="card-header">
                             <Link 
                                 to={`/activities/${activity._id}`}
                             >
                                 {activity.activityName}
                             </Link>
                         </p>
-                        <p>
-                            Description: {activity.description}
-                        </p>
-                        <p>
-                            Materials: {activity.materials}
-                        </p>
+                    <div className="card-time">
                         <p>
                             Set Up: {activity.setUpTime} min
                         </p>
                         <p>
                             Tear Down: {activity.tearDownTime} min
                         </p>
+                    </div>
+                    <div className="card-description">
+                        <p>
+                             Description: {activity.description}
+                        </p>
+                        <p>
+                            Materials: {activity.materials}
+                        </p>
+
+                        </div>
                     </div>
                 ))
             }

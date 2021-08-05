@@ -57,6 +57,7 @@ query singleActivity($_id: ID!) {
         materials
         setUpTime
         tearDownTime
+        categories
     }
   }
 `;
