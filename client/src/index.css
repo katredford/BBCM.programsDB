@@ -125,6 +125,7 @@ header .login-btn:hover {
   font-size: 3rem;
   line-height: 1rem;
   text-decoration: none;
+  color: var(--primary-color);
 }
 /* end hero styles */
 
