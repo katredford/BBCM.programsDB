@@ -59,21 +59,21 @@ MERN Application (An app that will allow Museum employees to enter their activit
 - Steps to add, save and view/print Activity
 (ADD STEPS AND SNAPSHOTS)
   * Step 1:
-    - *ADD STEP*
+    - *Home Page*
 <p align="center" width="100%">
-    <img src="ADDLINKTOSNAPSHOT" width="40%"/>
+    <img src="home.png" width="40%"/>
 </p>
     * Step 2:
 
-- *ADD STEP*
+- *Login*
 <p align="center" width="100%">
-    <img src="ADDLINKTOSNAPSHOT" width="40%"/>
+    <img src="login.png" width="40%"/>
 </p>
   * Step 3:
        
-- *ADD STEP*
+- *Add Activity*
 <p align="center" width="100%">
-    <img src="ADDLINKTOSNAPSHOT" width="40%"/>
+    <img src="addActivity.png" width="40%"/>
 </p> 
 
   ## Contributing
