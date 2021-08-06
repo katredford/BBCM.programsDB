@@ -128,7 +128,7 @@ header .login-btn:hover {
 }
 
 .program-color {
-  color: var(--primary-color);
+  color: var(--light);
 }
 /* end hero styles */
 
