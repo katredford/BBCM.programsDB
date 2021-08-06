@@ -71,7 +71,7 @@ MERN Application (An app that will allow Museum employees to enter their activit
 </p>
   * Step 3:
        
-- *ADD STEP*
+- *Add Activity*
 <p align="center" width="100%">
     <img src="addActivity.png" width="40%"/>
 </p> 
