@@ -1,8 +1,8 @@
 <h1 align='center'>BBCM.programsDB</h1>
 
 ###  * [Email me](mailto:katharine.redford@gmail.com) * 
-  * [Deployed App Link] (https://bbcm-programs.herokuapp.com/)
-  * [Github Repo Link] (https://github.com/katredford/BBCM.programsDB)
+  * [Deployed App Link](https://bbcm-programs.herokuapp.com/)
+  * [Github Repo Link](https://github.com/katredford/BBCM.programsDB)
 <br></br>
 
 <p align="center">

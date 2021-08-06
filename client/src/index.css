@@ -126,6 +126,10 @@ header .login-btn:hover {
   line-height: 1rem;
   text-decoration: none;
 }
+
+.program-color {
+  color: var(--light);
+}
 /* end hero styles */
 
 /* input and login form styles */
