@@ -127,7 +127,7 @@ header .login-btn:hover {
   text-decoration: none;
 }
 
-.program-color {
+.program-color h3 {
   color: var(--light);
 }
 /* end hero styles */
