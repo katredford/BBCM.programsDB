@@ -49,7 +49,7 @@ MERN Application (An app that will allow Museum employees to enter their activit
   * Requirements
       - Internet connection and any web browser
   * Step 1:
-- Click on URL Link [here](https://github.com/katredford/BBCM.programsDB)
+- Click on URL Link [here](https://bbcm-programs.herokuapp.com/)
 
   ## Usage Instructions
   ##### [Back to Table of Contents](#Table-of-Contents)
@@ -63,12 +63,14 @@ MERN Application (An app that will allow Museum employees to enter their activit
 <p align="center" width="100%">
     <img src="home.png" width="40%"/>
 </p>
+
     * Step 2:
 
 - *Login*
 <p align="center" width="100%">
     <img src="login.png" width="40%"/>
 </p>
+
   * Step 3:
        
 - *Add Activity*
