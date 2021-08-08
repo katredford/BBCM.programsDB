@@ -55,11 +55,9 @@ MERN Application (An app that will allow Museum employees to enter their activit
   ##### [Back to Table of Contents](#Table-of-Contents)
   * LOGIN:
 - Enter your email and password to Login
-    * ADD ACTIVITY:
-- Steps to add, save and view/print Activity
-(ADD STEPS AND SNAPSHOTS)
+- Steps to add, save and view/print Activity:
   * Step 1:
-    - *Home Page*
+  *Home Page* 
 <p align="center" width="100%">
     <img src="home.png" width="40%"/>
 </p>
